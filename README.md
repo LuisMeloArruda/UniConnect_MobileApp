@@ -2,10 +2,10 @@
 
 # Group members:
 
-Afonso Machado      (up202207611@fe.up.pt)
-Afonso Domingues    (up202207313@fe.up.pt)
-Ana Filipa Geraldes (up202208030@fe.up.pt)
-Luís Arruda         (up202206970@fe.up.pt)
+- Afonso Machado      (up202207611@fe.up.pt)
+- Afonso Domingues    (up202207313@fe.up.pt)
+- Ana Filipa Geraldes (up202208030@fe.up.pt)
+- Luís Arruda         (up202206970@fe.up.pt)
 
 ## Ideia 1
 Visão: Incentivar a comunidade académica a ter um papel ativo na busca por uma FEUP mais sustentável.
