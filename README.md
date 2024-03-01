@@ -1,6 +1,6 @@
 # 2LEIC16T4
 
-# Group members:
+## Group members:
 
 - Afonso Machado      (up202207611@fe.up.pt)
 - Afonso Domingues    (up202207313@fe.up.pt)
@@ -8,7 +8,7 @@
 - Luís Arruda         (up202206970@fe.up.pt)
 
 ## Visão
----
+
 Plataforma de apoio à integração estudantil, com o objetivo de fomentar a inclusão de novos estudantes no corpo estudantil, facilitando a interação entre eles e proporcionando informações relevantes sobre a comunidade académica. 
 
 Esta iniciativa está alinhada com diversos Objetivos de Desenvolvimento Sustentável (ODS) das Nações Unidas, destacando-se os seguintes:
@@ -22,7 +22,7 @@ A plataforma promove a integração e inclusão de novos estudantes, contribuind
 Ao associar os utilizadores com base em critérios como, por exemplo, curso, hobbies e interesses, a plataforma procura reduzir as desigualdades ao promover a integração de estudantes com perfis diversos. Isso contribui para a criação de um ambiente mais inclusivo e equitativo dentro da comunidade estudantil.
 
 ## Funcionalidades
----
+
 - Filtrar utilizadores de acordo com:
     - Curso
     - Hobbies
