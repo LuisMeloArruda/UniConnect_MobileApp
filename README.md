@@ -78,23 +78,23 @@ To ensure long-term maintenance of the code and facilitate easy understanding, o
 - **User Chat**
 	- `UI`: Provides the interface for chat and user profiles. 
 	- `Logic`: Manages the logic for user interaction, facilitating conversation between users with similar characteristics. 
-	- `Users Database`: Stores user information. 
-	- `Chat Database`: Stores conversations between users. 
-- **External Services** 
-	- `Message Handling`: Library responsible for receiving and sending messages from users.
+	- `Chats and Users Database`: Stores user information and the messages between them. 
+
 
 ![Logical Architecture](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/blob/5da3e83a403690600f5ae4d204723df1d93fcf67/umls/LogicalArchitecture.png)
 
 ### Physical architecture
 
 - **Student Smartphone**: This is where the Uniconnect application is located. 
-- **Uniconnect application server**: It employs the same logic as the previously presented logical diagram. However, events are separated from student organizations because they must be physically distinct. 
-- **Message server**: This physical entity, not under our direct control, facilitates the exchange of messages within the Uniconnect
+- **Firebase server**: Online database where all of the information of our app is being stored (like users, messages, authentication data, etc)
 
+  
 ![PhysicalArchitecture](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/blob/5da3e83a403690600f5ae4d204723df1d93fcf67/umls/PhysicalArchitecture.png)
 
 ### Vertical prototype
 
+
+![verticalPrototype](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/assets/131545939/fb731d46-735b-4172-b4a0-e7d4e85d3850)
 
 
 ## Project management
