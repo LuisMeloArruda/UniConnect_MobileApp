@@ -1,60 +1,107 @@
-# 2LEIC16T4
+# UniConnect Development Report
 
-## Vision:
+Welcome to the documentation pages of the UniConnect!
 
-The platform aims to support student integration, fostering the inclusion of new students into the study body, by facilitating interaction and providing relevant information about the academic community.
+You can find here details about the UniConnect, from a high-level vision to low-level implementation decisions, a kind of Software Development Report, organized by type of activities: 
 
-This initiative aligns with various United Nations Sustainable Development Goals (SDGs), with the following standing out:
+* [Business modeling](#Business-Modelling)
+  * [Product Vision](#Product-Vision)
+  * [Features and Assumptions](#Features-and-Assumptions)
+  * [Elevator Pitch](#Elevator-pitch)
+* [Requirements](#Requirements)
+  * [User stories](#User-stories)
+  * [Domain model](#Domain-model)
+* [Architecture and Design](#Architecture-And-Design)
+  * [Logical architecture](#Logical-Architecture)
+  * [Physical architecture](#Physical-Architecture)
+  * [Vertical prototype](#Vertical-Prototype)
+* [Project management](#Project-Management)
 
-#### SDG 4: Quality Education
+Contributions are expected to be made exclusively by the initial team, but we may open them to the community, after the course, in all areas and topics: requirements, technologies, development, experimentation, testing, etc.
 
-The platform advocates for the integration and inclusion of new students, contributing to a more welcoming and diverse academic environment. By facilitating interaction among students and providing updated information about the available resources within the academic community, the platform supports the promotion of quality education for all.
+Please contact us!
 
-#### SDG 10: Reduced Inequalities
+Thank you!
 
-By connecting users based on criteria such as course, hobbies, and interests, the platform aims to diminish inequalities by promoting the integration of students from diverse backgrounds. This contributes to fostering a more inclusive and equitable environment within the student community.
+| Name                | Email                                               |
+| ------------------- | --------------------------------------------------- |
+| Afonso Machado      | [up202207611@fe.up.pt](mailto:up202207611@fe.up.pt) |
+| Afonso Domingues    | [up202207313@fe.up.pt](mailto:up202207313@fe.up.pt) |
+| Ana Filipa Geraldes | [up202208030@fe.up.pt](mailto:up202208030@fe.up.pt) |
+| Luís Arruda         | [up202206970@fe.up.pt](mailto:up202206970@fe.up.pt) |
 
-## Planned features:
 
-- Filter users according to:
-    - Course
-    - Hobbies
-    - Languages
-    - Etc.
-- Support for direct chat between two users, allowing students to speak privately, exchanging information, doubts, interests, and experiences, contributing to a more collaborative and welcoming environment.
-- Updated information on all available student organizations for the community. Users can access details about each organization, its activities, events, and how to participate, thus promoting student involvement in extracurricular activities and interest groups.
-- Information regarding upcoming student events, including lectures, workshops, seminars, parties, and more. Users will have access to event details such as date, time, location and description, encouraging active involvement and participation in the academic and social aspects of campus life.
+---
+## Business Modelling
 
-## User Stories:
+### Product Vision
 
-As a university student,
-I want to be able to initiate direct chat with another student, 
-So that I can have private conversations to discuss information, clear doubts, share interests and exchange experiences in a collaborative manner. 
+> UniConnect : Where Every Student Finds Their Place
 
-As a university student,
-I want to be able to filter other users based on their courses,
-So that I can connect with peers who are studying similar subjects.
+Empowering students to thrive in their academic journey, our platform is the hub of inclusion and integration within the university community. By fostering meaningful interactions and providing essential information, we cultivate a vibrant and diverse ecosystem where every student feels valued and supported. With our strong commitment to quality education and reducing inequalities, we pave the way for a more inclusive and equitable future, one connection at a time.
 
-As a university student,
-I want to be able to filter other users based on their hobbies,
-So that I can find individuals who share similar interests.
+### Features and Assumptions
 
-As a university student,
-I want to be able to filter other users based on languages spoken,
-So that I can communicate with individuals who speak the same language or practice languages I’m interested in learning.
+- **Personalized User Filtering:** enable users to filter other students based on their courses, hobbies, languages, and more.
+- **Direct Chat Functionality:** Provide a platform for private messaging between users, facilitating communication and information exchange, contributing to a more collaborative and welcoming environment.
+- **Student Organization Information**: Offer updated details on all student organizations, thus promoting student involvement in extracurricular activities and interest groups.
+- **Up-To-Date Event Listings:** Providing information on upcoming student events, including lectures, workshops, and social gatherings, encouraging active involvement and participation in the academic and social aspects of campus life.
 
-As a university student,  
-I want to access updated information about student organizations within the community,
-So that I can learn about their activities, events and how to participate.
+### Elevator Pitch
 
-As a university student,
-I want to view detailed information about upcoming student events such as lectures, workshops, seminars and parties,
-So that I can plan my participation accordingly and make the most out of campus life.
+Tired of feeling lost in the sea of university life? Introducing UniConnect, the ultimate solution for seamless student integration and engagement in the university community. We're not just another app; we're a vibrant hub of inclusion and integration, ensuring every student feels valued and supported. With personalized user filtering, direct chat functionality, comprehensive student organization details, and up-to-date event listings, we're revolutionizing how you engage with your university community. Say goodbye to isolation and hello to a more connected, collaborative, and fulfilling academic journey with UniConnect.
 
-## Group members:
+## Requirements
 
-- Afonso Machado      (up202207611@fe.up.pt)
-- Afonso Domingues    (up202207313@fe.up.pt)
-- Ana Filipa Geraldes (up202208030@fe.up.pt)
-- Luís Arruda         (up202206970@fe.up.pt)
+### Domain model
 
+This domain diagram consists of five classes. 
+- `User`: Stores data regarding all application users, including their name, username, password, a photo, and a unique email address. 
+- `Chat`: Contains the chat description, and a user can either be the owner or participate in multiple chats. 
+- `Student Organizations`: Contains information about student organizations, such as the organization's name, description, room, and social media links. Events are organized through this class. 
+- `Events`: Contains information about events, including the title, date, location, description, and start time -
+- `Tags`: This class allows users to search for specific characteristics within student organizations, events, and each other using the attributes type and name.
+
+![[umls\DomainModel.png]]
+
+## Architecture and Design
+
+In this section we'll describe the logical and physical architectures of our project. 
+
+### Logical architecture
+
+To ensure long-term maintenance of the code and facilitate easy understanding, our project has been divided into three main sections: 
+- **Events and Student Organizations**
+	- `UI` : This module is responsible for drawing the interface, allowing user-program interaction. 
+	- `Logic`: Handles the logic for creating and updating events and organizations. 
+	- `Database`: Stores information about events and organizations. 
+- **User Chat 
+	- `UI`: Provides the interface for chat and user profiles. 
+	- `Logic`: Manages the logic for user interaction, facilitating conversation between users with similar characteristics. 
+	- `Users Database`: Stores user information. 
+	- `Chat Database`: Stores conversations between users. 
+- **External Services** 
+	- `Message Handling`: Library responsible for receiving and sending messages from users.
+
+![[umls\LogicalArchitecture.png]]
+
+### Physical architecture
+
+- **Student Smartphone**: This is where the Uniconnect application is located. 
+- **Uniconnect application server**: It employs the same logic as the previously presented logical diagram. However, events are separated from student organizations because they must be physically distinct. 
+- **Message server**: This physical entity, not under our direct control, facilitates the exchange of messages within the Uniconnect
+
+![[umls\PhysicalArchitecture.png]]
+
+### Vertical prototype
+
+
+
+## Project management
+
+You can find below information and references related with the project management in our team:
+- Backlog management: Product backlog and Sprint backlog in a [Github Projects board]
+- Release management: [v0], [v1], [v2], [v3], ...;
+- Sprint planning and retrospectives:
+    - plans: screenshots of Github Projects board at begin and end of each iteration;
+    - retrospectives: meeting notes in a document in the repository;
