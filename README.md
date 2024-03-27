@@ -62,7 +62,7 @@ This domain diagram consists of five classes.
 - `Events`: Contains information about events, including the title, date, location, description, and start time -
 - `Tags`: This class allows users to search for specific characteristics within student organizations, events, and each other using the attributes type and name.
 
-![[umls\DomainModel.png]]
+![Domain Model](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/blob/5da3e83a403690600f5ae4d204723df1d93fcf67/umls/DomainModel.png)
 
 ## Architecture and Design
 
@@ -75,7 +75,7 @@ To ensure long-term maintenance of the code and facilitate easy understanding, o
 	- `UI` : This module is responsible for drawing the interface, allowing user-program interaction. 
 	- `Logic`: Handles the logic for creating and updating events and organizations. 
 	- `Database`: Stores information about events and organizations. 
-- **User Chat 
+- **User Chat**
 	- `UI`: Provides the interface for chat and user profiles. 
 	- `Logic`: Manages the logic for user interaction, facilitating conversation between users with similar characteristics. 
 	- `Users Database`: Stores user information. 
@@ -83,7 +83,7 @@ To ensure long-term maintenance of the code and facilitate easy understanding, o
 - **External Services** 
 	- `Message Handling`: Library responsible for receiving and sending messages from users.
 
-![[umls\LogicalArchitecture.png]]
+![Logical Architecture](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/blob/5da3e83a403690600f5ae4d204723df1d93fcf67/umls/LogicalArchitecture.png)
 
 ### Physical architecture
 
@@ -91,7 +91,7 @@ To ensure long-term maintenance of the code and facilitate easy understanding, o
 - **Uniconnect application server**: It employs the same logic as the previously presented logical diagram. However, events are separated from student organizations because they must be physically distinct. 
 - **Message server**: This physical entity, not under our direct control, facilitates the exchange of messages within the Uniconnect
 
-![[umls\PhysicalArchitecture.png]]
+![PhysicalArchitecture](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/blob/5da3e83a403690600f5ae4d204723df1d93fcf67/umls/PhysicalArchitecture.png)
 
 ### Vertical prototype
 
@@ -100,7 +100,7 @@ To ensure long-term maintenance of the code and facilitate easy understanding, o
 ## Project management
 
 You can find below information and references related with the project management in our team:
-- Backlog management: Product backlog and Sprint backlog in a [Github Projects board]
+- Backlog management: Product backlog and Sprint backlog in a [Github Projects board](https://github.com/orgs/FEUP-LEIC-ES-2023-24/projects/56)
 - Release management: [v0], [v1], [v2], [v3], ...;
 - Sprint planning and retrospectives:
     - plans: screenshots of Github Projects board at begin and end of each iteration;
