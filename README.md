@@ -38,7 +38,7 @@ Thank you!
 
 > UniConnect : Where Every Student Finds Their Place
 
-Empowering students to thrive in their academic journey, our platform is the hub of inclusion and integration within the university community. By fostering meaningful interactions and providing essential information, we cultivate a vibrant and diverse ecosystem where every student feels valued and supported. With our strong commitment to quality education and reducing inequalities, we pave the way for a more inclusive and equitable future, one connection at a time.
+This application helps university students to thrive in their academic journey. It provides the opportunity to encounter people with certain characteristics, such as languages spoken, interests, course and which year is enrolled in, and many others. You can engage in meaningful conversations with them via direct messages, cultivating a vibrant and diverse ecosystem where every student feels valued and supported. With our strong commitment to quality education through the organization of events and student associations, we pave the way for a more inclusive and equitable future. Bringing numerous benefits to the life of students, as they will feel less lonely and more confident to contribute to society, one connection at a time.
 
 ### Features and Assumptions
 
