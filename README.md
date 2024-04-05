@@ -105,3 +105,84 @@ You can find below information and references related with the project managemen
 - Sprint planning and retrospectives:
     - plans: screenshots of Github Projects board at begin and end of each iteration;
     - retrospectives: meeting notes in a document in the repository;
+
+## Table of contents
+1. [Iteration 0](#iteration-0)
+2. [Iteration 1](#iteration-1)
+3. [Iteration 2](#iteration-2)
+4. [Iteration 3](#iteration-3)
+5. [Iteration 4](#iteration-4)
+
+## Iteration 0
+Release: https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/releases/tag/v0
+
+## Iteration 1
+Release: 
+
+### Board
+
+`Before`
+
+![IT1](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/assets/116494634/643c033d-32ed-44c0-9ad3-d45eb5973241)
+
+`After`
+
+### Retrospective
+
+#### What went well?
+
+#### What should we do differently?
+
+#### What still puzzles us?
+
+## Iteration 2
+
+Release: 
+
+### Board
+
+`Before`
+
+`After`
+
+### Retrospective
+
+#### What went well?
+
+#### What should we do differently?
+
+#### What still puzzles us?
+
+## Iteration 3
+
+Release: 
+
+### Board
+
+`Before`
+
+`After`
+
+### Retrospective
+
+#### What went well?
+
+#### What should we do differently?
+
+#### What still puzzles us?
+
+## Iteration 4
+
+Release: 
+
+### Board
+
+`Before`
+
+`After`
+
+### Retrospective
+
+#### What went well?
+
+#### What should we do differently?
