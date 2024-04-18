@@ -105,6 +105,7 @@ class _UserListSmallWidgetState extends State<UserListSmallWidget> {
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Manrope',
+                              letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
                             ),
                       ),
@@ -120,6 +121,7 @@ class _UserListSmallWidgetState extends State<UserListSmallWidget> {
                               FlutterFlowTheme.of(context).bodySmall.override(
                                     fontFamily: 'Manrope',
                                     color: FlutterFlowTheme.of(context).primary,
+                                    letterSpacing: 0.0,
                                   ),
                         ),
                       ),
@@ -144,9 +146,14 @@ class _UserListSmallWidgetState extends State<UserListSmallWidget> {
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                       child: Text(
-                        'ME',
+                        FFLocalizations.of(context).getText(
+                          'l0kket5d' /* ME */,
+                        ),
                         textAlign: TextAlign.center,
-                        style: FlutterFlowTheme.of(context).bodyMedium,
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Manrope',
+                              letterSpacing: 0.0,
+                            ),
                       ),
                     ),
                   ),

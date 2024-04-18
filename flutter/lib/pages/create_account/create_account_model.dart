@@ -8,28 +8,23 @@ class CreateAccountModel extends FlutterFlowModel<CreateAccountWidget> {
   final unfocusNode = FocusNode();
   // State field(s) for username widget.
   FocusNode? usernameFocusNode;
-  TextEditingController? usernameController;
-  String? Function(BuildContext, String?)? usernameControllerValidator;
-  // State field(s) for name widget.
-  FocusNode? nameFocusNode;
-  TextEditingController? nameController;
-  String? Function(BuildContext, String?)? nameControllerValidator;
+  TextEditingController? usernameTextController;
+  String? Function(BuildContext, String?)? usernameTextControllerValidator;
   // State field(s) for email widget.
   FocusNode? emailFocusNode;
-  TextEditingController? emailController;
-  String? Function(BuildContext, String?)? emailControllerValidator;
+  TextEditingController? emailTextController;
+  String? Function(BuildContext, String?)? emailTextControllerValidator;
   // State field(s) for password widget.
   FocusNode? passwordFocusNode;
-  TextEditingController? passwordController;
+  TextEditingController? passwordTextController;
   late bool passwordVisibility;
-  String? Function(BuildContext, String?)? passwordControllerValidator;
+  String? Function(BuildContext, String?)? passwordTextControllerValidator;
   // State field(s) for confirmpassword widget.
   FocusNode? confirmpasswordFocusNode;
-  TextEditingController? confirmpasswordController;
+  TextEditingController? confirmpasswordTextController;
   late bool confirmpasswordVisibility;
-  String? Function(BuildContext, String?)? confirmpasswordControllerValidator;
-
-  /// Initialization and disposal methods.
+  String? Function(BuildContext, String?)?
+      confirmpasswordTextControllerValidator;
 
   @override
   void initState(BuildContext context) {
@@ -41,22 +36,15 @@ class CreateAccountModel extends FlutterFlowModel<CreateAccountWidget> {
   void dispose() {
     unfocusNode.dispose();
     usernameFocusNode?.dispose();
-    usernameController?.dispose();
-
-    nameFocusNode?.dispose();
-    nameController?.dispose();
+    usernameTextController?.dispose();
 
     emailFocusNode?.dispose();
-    emailController?.dispose();
+    emailTextController?.dispose();
 
     passwordFocusNode?.dispose();
-    passwordController?.dispose();
+    passwordTextController?.dispose();
 
     confirmpasswordFocusNode?.dispose();
-    confirmpasswordController?.dispose();
+    confirmpasswordTextController?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

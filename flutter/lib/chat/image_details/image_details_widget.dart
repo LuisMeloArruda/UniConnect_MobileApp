@@ -28,67 +28,69 @@ class _ImageDetailsWidgetState extends State<ImageDetailsWidget>
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
-  final animationsMap = {
-    'imageOnPageLoadAnimation': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        VisibilityEffect(duration: 1.ms),
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 300.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 300.ms,
-          begin: const Offset(0.0, 30.0),
-          end: const Offset(0.0, 0.0),
-        ),
-        ScaleEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 300.ms,
-          begin: const Offset(0.7, 0.7),
-          end: const Offset(1.0, 1.0),
-        ),
-      ],
-    ),
-    'rowOnPageLoadAnimation': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        VisibilityEffect(duration: 1.ms),
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 300.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 300.ms,
-          begin: const Offset(0.0, 30.0),
-          end: const Offset(0.0, 0.0),
-        ),
-        TiltEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 300.ms,
-          begin: const Offset(-0.698, 0),
-          end: const Offset(0, 0),
-        ),
-      ],
-    ),
-  };
+  final animationsMap = <String, AnimationInfo>{};
 
   @override
   void initState() {
     super.initState();
     _model = createModel(context, () => ImageDetailsModel());
+
+    animationsMap.addAll({
+      'imageOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          VisibilityEffect(duration: 1.ms),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 300.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 300.0.ms,
+            begin: const Offset(0.0, 30.0),
+            end: const Offset(0.0, 0.0),
+          ),
+          ScaleEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 300.0.ms,
+            begin: const Offset(0.7, 0.7),
+            end: const Offset(1.0, 1.0),
+          ),
+        ],
+      ),
+      'rowOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          VisibilityEffect(duration: 1.ms),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 300.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 300.0.ms,
+            begin: const Offset(0.0, 30.0),
+            end: const Offset(0.0, 0.0),
+          ),
+          TiltEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 300.0.ms,
+            begin: const Offset(-0.698, 0),
+            end: const Offset(0, 0),
+          ),
+        ],
+      ),
+    });
   }
 
   @override
@@ -234,6 +236,7 @@ class _ImageDetailsWidgetState extends State<ImageDetailsWidget>
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Manrope',
+                                            letterSpacing: 0.0,
                                             lineHeight: 1.5,
                                           ),
                                     )),
@@ -241,10 +244,20 @@ class _ImageDetailsWidgetState extends State<ImageDetailsWidget>
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 4.0, 0.0, 0.0),
                                       child: Text(
-                                        dateTimeFormat('relative',
-                                            widget.chatMessage!.timestamp!),
+                                        dateTimeFormat(
+                                          'relative',
+                                          widget.chatMessage!.timestamp!,
+                                          locale: FFLocalizations.of(context)
+                                                  .languageShortCode ??
+                                              FFLocalizations.of(context)
+                                                  .languageCode,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
-                                            .labelSmall,
+                                            .labelSmall
+                                            .override(
+                                              fontFamily: 'Manrope',
+                                              letterSpacing: 0.0,
+                                            ),
                                       ),
                                     ),
                                   ].divide(const SizedBox(width: 4.0)),
@@ -263,6 +276,7 @@ class _ImageDetailsWidgetState extends State<ImageDetailsWidget>
                                         .labelLarge
                                         .override(
                                           fontFamily: 'Manrope',
+                                          letterSpacing: 0.0,
                                           lineHeight: 1.5,
                                         ),
                                   )),

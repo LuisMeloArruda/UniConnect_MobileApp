@@ -173,6 +173,7 @@ class _Chat2DetailsWidgetState extends State<Chat2DetailsWidget> {
                                       fontFamily: 'Manrope',
                                       color:
                                           FlutterFlowTheme.of(context).primary,
+                                      letterSpacing: 0.0,
                                     ),
                               ),
                             ],
@@ -303,8 +304,15 @@ class _Chat2DetailsWidgetState extends State<Chat2DetailsWidget> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Group Chat',
-                                style: FlutterFlowTheme.of(context).bodyLarge,
+                                FFLocalizations.of(context).getText(
+                                  'gqkvnlbi' /* Group Chat */,
+                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyLarge
+                                    .override(
+                                      fontFamily: 'Manrope',
+                                      letterSpacing: 0.0,
+                                    ),
                               ),
                               Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
@@ -320,6 +328,7 @@ class _Chat2DetailsWidgetState extends State<Chat2DetailsWidget> {
                                         fontFamily: 'Manrope',
                                         color: FlutterFlowTheme.of(context)
                                             .primary,
+                                        letterSpacing: 0.0,
                                       ),
                                 ),
                               ),

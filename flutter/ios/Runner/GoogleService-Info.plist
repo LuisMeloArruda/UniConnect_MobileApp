@@ -26,5 +26,7 @@
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:525748750750:ios:b48d83f8a3ffe257442e8f</string>
+	<key>DATABASE_URL</key>
+	<string>https://uni-connect-4nugh7-default-rtdb.europe-west1.firebasedatabase.app</string>
 </dict>
 </plist>

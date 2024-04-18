@@ -77,14 +77,24 @@ class _Chat2InviteUsersWidgetState extends State<Chat2InviteUsersWidget> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Invite Friends',
-                style: FlutterFlowTheme.of(context).headlineSmall,
+                FFLocalizations.of(context).getText(
+                  'lokw46mv' /* Invite Friends */,
+                ),
+                style: FlutterFlowTheme.of(context).headlineSmall.override(
+                      fontFamily: 'Urbanist',
+                      letterSpacing: 0.0,
+                    ),
               ),
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                 child: Text(
-                  'Select users from below to start a chat.',
-                  style: FlutterFlowTheme.of(context).labelSmall,
+                  FFLocalizations.of(context).getText(
+                    '8rpicmyf' /* Select users from below to sta... */,
+                  ),
+                  style: FlutterFlowTheme.of(context).labelSmall.override(
+                        fontFamily: 'Manrope',
+                        letterSpacing: 0.0,
+                      ),
                 ),
               ),
             ],
@@ -129,8 +139,15 @@ class _Chat2InviteUsersWidgetState extends State<Chat2InviteUsersWidget> {
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               16.0, 12.0, 0.0, 0.0),
                           child: Text(
-                            'Invite Friends',
-                            style: FlutterFlowTheme.of(context).labelMedium,
+                            FFLocalizations.of(context).getText(
+                              'txh1pk13' /* Invite Friends */,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .labelMedium
+                                .override(
+                                  fontFamily: 'Manrope',
+                                  letterSpacing: 0.0,
+                                ),
                           ),
                         ),
                       ),
@@ -144,15 +161,25 @@ class _Chat2InviteUsersWidgetState extends State<Chat2InviteUsersWidget> {
                                   ) -
                                   1))
                               .toString(),
-                          style: FlutterFlowTheme.of(context).bodyMedium,
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'Manrope',
+                                    letterSpacing: 0.0,
+                                  ),
                         ),
                       ),
                       Padding(
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(2.0, 12.0, 0.0, 0.0),
                         child: Text(
-                          'Selected',
-                          style: FlutterFlowTheme.of(context).bodyMedium,
+                          FFLocalizations.of(context).getText(
+                            'v8guoqwa' /* Selected */,
+                          ),
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'Manrope',
+                                    letterSpacing: 0.0,
+                                  ),
                         ),
                       ),
                     ],
@@ -324,6 +351,7 @@ class _Chat2InviteUsersWidgetState extends State<Chat2InviteUsersWidget> {
                                                 .bodyLarge
                                                 .override(
                                                   fontFamily: 'Manrope',
+                                                  letterSpacing: 0.0,
                                                   lineHeight: 2.0,
                                                 ),
                                           ),
@@ -339,6 +367,7 @@ class _Chat2InviteUsersWidgetState extends State<Chat2InviteUsersWidget> {
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondary,
+                                                  letterSpacing: 0.0,
                                                 ),
                                           ),
                                           tileColor:
@@ -492,6 +521,7 @@ class _Chat2InviteUsersWidgetState extends State<Chat2InviteUsersWidget> {
                                   .override(
                                     fontFamily: 'Manrope',
                                     color: FlutterFlowTheme.of(context).info,
+                                    letterSpacing: 0.0,
                                   ),
                             ),
                             duration: const Duration(milliseconds: 3000),
@@ -517,6 +547,7 @@ class _Chat2InviteUsersWidgetState extends State<Chat2InviteUsersWidget> {
                           FlutterFlowTheme.of(context).titleSmall.override(
                                 fontFamily: 'Manrope',
                                 color: Colors.white,
+                                letterSpacing: 0.0,
                               ),
                       elevation: 2.0,
                       borderSide: const BorderSide(

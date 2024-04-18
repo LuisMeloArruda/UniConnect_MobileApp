@@ -168,7 +168,10 @@ class _ChatThreadComponentWidgetState extends State<ChatThreadComponentWidget> {
                 BoxShadow(
                   blurRadius: 3.0,
                   color: Color(0x33000000),
-                  offset: Offset(0.0, -2.0),
+                  offset: Offset(
+                    0.0,
+                    -2.0,
+                  ),
                 )
               ],
             ),
@@ -354,8 +357,12 @@ class _ChatThreadComponentWidgetState extends State<ChatThreadComponentWidget> {
                                             fontFamily: 'Manrope',
                                             color: FlutterFlowTheme.of(context)
                                                 .primary,
+                                            letterSpacing: 0.0,
                                           ),
-                                      hintText: 'Start typing here...',
+                                      hintText:
+                                          FFLocalizations.of(context).getText(
+                                        '4bpsrwfg' /* Start typing here... */,
+                                      ),
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .labelSmall
                                           .override(
@@ -363,6 +370,7 @@ class _ChatThreadComponentWidgetState extends State<ChatThreadComponentWidget> {
                                             color: FlutterFlowTheme.of(context)
                                                 .primary,
                                             fontSize: 15.0,
+                                            letterSpacing: 0.0,
                                           ),
                                       errorStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -371,6 +379,7 @@ class _ChatThreadComponentWidgetState extends State<ChatThreadComponentWidget> {
                                             color: FlutterFlowTheme.of(context)
                                                 .error,
                                             fontSize: 12.0,
+                                            letterSpacing: 0.0,
                                           ),
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
@@ -420,6 +429,7 @@ class _ChatThreadComponentWidgetState extends State<ChatThreadComponentWidget> {
                                         .override(
                                           fontFamily: 'Manrope',
                                           fontSize: 11.0,
+                                          letterSpacing: 0.0,
                                         ),
                                     maxLines: 12,
                                     minLines: 1,

@@ -61,7 +61,10 @@ class _ChatThreadWidgetState extends State<ChatThreadWidget> {
                   BoxShadow(
                     blurRadius: 0.0,
                     color: FlutterFlowTheme.of(context).primary,
-                    offset: const Offset(0.0, 1.0),
+                    offset: const Offset(
+                      0.0,
+                      1.0,
+                    ),
                   )
                 ],
                 borderRadius: BorderRadius.circular(0.0),
@@ -146,6 +149,7 @@ class _ChatThreadWidgetState extends State<ChatThreadWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Manrope',
+                                            letterSpacing: 0.0,
                                             lineHeight: 1.5,
                                           ),
                                     )),
@@ -155,13 +159,21 @@ class _ChatThreadWidgetState extends State<ChatThreadWidget> {
                                       child: Text(
                                         valueOrDefault<String>(
                                           dateTimeFormat(
-                                              'relative',
-                                              widget
-                                                  .chatMessagesRef?.timestamp),
+                                            'relative',
+                                            widget.chatMessagesRef?.timestamp,
+                                            locale: FFLocalizations.of(context)
+                                                    .languageShortCode ??
+                                                FFLocalizations.of(context)
+                                                    .languageCode,
+                                          ),
                                           '--',
                                         ),
                                         style: FlutterFlowTheme.of(context)
-                                            .labelSmall,
+                                            .labelSmall
+                                            .override(
+                                              fontFamily: 'Manrope',
+                                              letterSpacing: 0.0,
+                                            ),
                                       ),
                                     ),
                                   ].divide(const SizedBox(width: 4.0)),
@@ -180,6 +192,7 @@ class _ChatThreadWidgetState extends State<ChatThreadWidget> {
                                         .labelLarge
                                         .override(
                                           fontFamily: 'Manrope',
+                                          letterSpacing: 0.0,
                                           lineHeight: 1.5,
                                         ),
                                   )),
@@ -261,7 +274,10 @@ class _ChatThreadWidgetState extends State<ChatThreadWidget> {
                 BoxShadow(
                   blurRadius: 0.0,
                   color: FlutterFlowTheme.of(context).primary,
-                  offset: const Offset(0.0, 1.0),
+                  offset: const Offset(
+                    0.0,
+                    1.0,
+                  ),
                 )
               ],
               borderRadius: BorderRadius.circular(0.0),
@@ -294,12 +310,22 @@ class _ChatThreadWidgetState extends State<ChatThreadWidget> {
                                         0.0, 4.0, 4.0, 0.0),
                                     child: Text(
                                       valueOrDefault<String>(
-                                        dateTimeFormat('relative',
-                                            widget.chatMessagesRef?.timestamp),
+                                        dateTimeFormat(
+                                          'relative',
+                                          widget.chatMessagesRef?.timestamp,
+                                          locale: FFLocalizations.of(context)
+                                                  .languageShortCode ??
+                                              FFLocalizations.of(context)
+                                                  .languageCode,
+                                        ),
                                         '--',
                                       ),
                                       style: FlutterFlowTheme.of(context)
-                                          .labelSmall,
+                                          .labelSmall
+                                          .override(
+                                            fontFamily: 'Manrope',
+                                            letterSpacing: 0.0,
+                                          ),
                                     ),
                                   ),
                                 ),
@@ -318,6 +344,7 @@ class _ChatThreadWidgetState extends State<ChatThreadWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Manrope',
+                                            letterSpacing: 0.0,
                                             lineHeight: 1.5,
                                           ),
                                     )),
@@ -334,7 +361,12 @@ class _ChatThreadWidgetState extends State<ChatThreadWidget> {
                                   widget.chatMessagesRef?.text,
                                   '--',
                                 ),
-                                style: FlutterFlowTheme.of(context).labelLarge,
+                                style: FlutterFlowTheme.of(context)
+                                    .labelLarge
+                                    .override(
+                                      fontFamily: 'Manrope',
+                                      letterSpacing: 0.0,
+                                    ),
                               )),
                             ),
                             if (widget.chatMessagesRef?.image != null &&

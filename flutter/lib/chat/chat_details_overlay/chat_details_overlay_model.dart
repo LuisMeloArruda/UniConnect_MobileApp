@@ -13,8 +13,6 @@ class ChatDetailsOverlayModel
   // Model for deleteDialog component.
   late DeleteDialogModel deleteDialogModel;
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {
     userListSmallModels = FlutterFlowDynamicModels(() => UserListSmallModel());
@@ -26,8 +24,4 @@ class ChatDetailsOverlayModel
     userListSmallModels.dispose();
     deleteDialogModel.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

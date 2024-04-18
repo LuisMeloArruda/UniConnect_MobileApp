@@ -22,6 +22,18 @@ class FFAppState extends ChangeNotifier {
     notifyListeners();
   }
 
+  bool _isDarkMode = false;
+  bool get isDarkMode => _isDarkMode;
+  set isDarkMode(bool value) {
+    _isDarkMode = value;
+  }
+
+  bool _ChangePhoto = false;
+  bool get ChangePhoto => _ChangePhoto;
+  set ChangePhoto(bool value) {
+    _ChangePhoto = value;
+  }
+
   final _userDocQueryManager = FutureRequestManager<UsersRecord>();
   Future<UsersRecord> userDocQuery({
     String? uniqueQueryKey,

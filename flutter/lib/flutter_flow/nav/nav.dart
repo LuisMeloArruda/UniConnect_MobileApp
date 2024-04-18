@@ -107,7 +107,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             'chatRef': getDoc(['chats'], ChatsRecord.fromSnapshot),
           },
           builder: (context, params) => Chat2DetailsWidget(
-            chatRef: params.getParam('chatRef', ParamType.Document),
+            chatRef: params.getParam(
+              'chatRef',
+              ParamType.Document,
+            ),
           ),
         ),
         FFRoute(
@@ -122,7 +125,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             'chatRef': getDoc(['chats'], ChatsRecord.fromSnapshot),
           },
           builder: (context, params) => Chat2InviteUsersWidget(
-            chatRef: params.getParam('chatRef', ParamType.Document),
+            chatRef: params.getParam(
+              'chatRef',
+              ParamType.Document,
+            ),
           ),
         ),
         FFRoute(
@@ -133,8 +139,46 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 getDoc(['chat_messages'], ChatMessagesRecord.fromSnapshot),
           },
           builder: (context, params) => ImageDetailsWidget(
-            chatMessage: params.getParam('chatMessage', ParamType.Document),
+            chatMessage: params.getParam(
+              'chatMessage',
+              ParamType.Document,
+            ),
           ),
+        ),
+        FFRoute(
+          name: 'EditProfileCopy',
+          path: '/editProfileCopy',
+          builder: (context, params) => const EditProfileCopyWidget(),
+        ),
+        FFRoute(
+          name: 'onboarding',
+          path: '/onboarding',
+          builder: (context, params) => const OnboardingWidget(),
+        ),
+        FFRoute(
+          name: 'template_only_not_to_use',
+          path: '/templateOnlyNotToUse',
+          builder: (context, params) => const TemplateOnlyNotToUseWidget(),
+        ),
+        FFRoute(
+          name: 'EditProfile',
+          path: '/editProfile',
+          builder: (context, params) => const EditProfileWidget(),
+        ),
+        FFRoute(
+          name: 'MyProfile',
+          path: '/myProfile',
+          builder: (context, params) => const MyProfileWidget(),
+        ),
+        FFRoute(
+          name: 'AboutUs',
+          path: '/aboutUs',
+          builder: (context, params) => const AboutUsWidget(),
+        ),
+        FFRoute(
+          name: 'RecoverPassword',
+          path: '/recoverPassword',
+          builder: (context, params) => const RecoverPasswordWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],
@@ -212,7 +256,7 @@ extension _GoRouterStateExtensions on GoRouterState {
       extra != null ? extra as Map<String, dynamic> : {};
   Map<String, dynamic> get allParams => <String, dynamic>{}
     ..addAll(pathParameters)
-    ..addAll(queryParameters)
+    ..addAll(uri.queryParameters)
     ..addAll(extraMap);
   TransitionInfo get transitionInfo => extraMap.containsKey(kTransitionInfoKey)
       ? extraMap[kTransitionInfoKey] as TransitionInfo
@@ -268,8 +312,12 @@ class FFParameters {
       return param;
     }
     // Return serialized value.
-    return deserializeParam<T>(param, type, isList,
-        collectionNamePath: collectionNamePath);
+    return deserializeParam<T>(
+      param,
+      type,
+      isList,
+      collectionNamePath: collectionNamePath,
+    );
   }
 }
 
@@ -301,7 +349,7 @@ class FFRoute {
           }
 
           if (requireAuth && !appStateNotifier.loggedIn) {
-            appStateNotifier.setRedirectLocationIfUnset(state.location);
+            appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
             return '/login';
           }
           return null;
@@ -380,7 +428,7 @@ class RootPageContext {
   static bool isInactiveRootPage(BuildContext context) {
     final rootPageContext = context.read<RootPageContext?>();
     final isRootPage = rootPageContext?.isRootPage ?? false;
-    final location = GoRouter.of(context).location;
+    final location = GoRouterState.of(context).uri.toString();
     return isRootPage &&
         location != '/' &&
         location != rootPageContext?.errorRoute;

@@ -57,7 +57,10 @@ class _ChatDetailsOverlayWidgetState extends State<ChatDetailsOverlayWidget> {
               BoxShadow(
                 blurRadius: 4.0,
                 color: Color(0x33000000),
-                offset: Offset(0.0, 2.0),
+                offset: Offset(
+                  0.0,
+                  2.0,
+                ),
               )
             ],
             borderRadius: const BorderRadius.only(
@@ -79,9 +82,11 @@ class _ChatDetailsOverlayWidgetState extends State<ChatDetailsOverlayWidget> {
                     textScaler: MediaQuery.of(context).textScaler,
                     text: TextSpan(
                       children: [
-                        const TextSpan(
-                          text: 'Group Chat ID: ',
-                          style: TextStyle(),
+                        TextSpan(
+                          text: FFLocalizations.of(context).getText(
+                            'r85nwzze' /* Group Chat ID:  */,
+                          ),
+                          style: const TextStyle(),
                         ),
                         TextSpan(
                           text: valueOrDefault<String>(
@@ -94,15 +99,23 @@ class _ChatDetailsOverlayWidgetState extends State<ChatDetailsOverlayWidget> {
                           ),
                         )
                       ],
-                      style: FlutterFlowTheme.of(context).labelMedium,
+                      style: FlutterFlowTheme.of(context).labelMedium.override(
+                            fontFamily: 'Manrope',
+                            letterSpacing: 0.0,
+                          ),
                     ),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
                   child: Text(
-                    'In this chat',
-                    style: FlutterFlowTheme.of(context).headlineSmall,
+                    FFLocalizations.of(context).getText(
+                      '901yc4qj' /* In this chat */,
+                    ),
+                    style: FlutterFlowTheme.of(context).headlineSmall.override(
+                          fontFamily: 'Urbanist',
+                          letterSpacing: 0.0,
+                        ),
                   ),
                 ),
                 Padding(
@@ -205,6 +218,7 @@ class _ChatDetailsOverlayWidgetState extends State<ChatDetailsOverlayWidget> {
                                         fontFamily: 'Manrope',
                                         color:
                                             FlutterFlowTheme.of(context).info,
+                                        letterSpacing: 0.0,
                                       ),
                                 ),
                                 duration: const Duration(milliseconds: 3000),
@@ -241,7 +255,9 @@ class _ChatDetailsOverlayWidgetState extends State<ChatDetailsOverlayWidget> {
                     onPressed: () async {
                       Navigator.pop(context);
                     },
-                    text: 'Close',
+                    text: FFLocalizations.of(context).getText(
+                      'rn3lmp8w' /* Close */,
+                    ),
                     options: FFButtonOptions(
                       width: double.infinity,
                       height: 52.0,
@@ -254,6 +270,7 @@ class _ChatDetailsOverlayWidgetState extends State<ChatDetailsOverlayWidget> {
                           FlutterFlowTheme.of(context).titleLarge.override(
                                 fontFamily: 'Manrope',
                                 fontSize: 18.0,
+                                letterSpacing: 0.0,
                               ),
                       elevation: 0.0,
                       borderSide: BorderSide(

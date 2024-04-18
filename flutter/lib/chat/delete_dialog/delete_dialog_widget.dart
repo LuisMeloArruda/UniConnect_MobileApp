@@ -28,28 +28,7 @@ class _DeleteDialogWidgetState extends State<DeleteDialogWidget>
     with TickerProviderStateMixin {
   late DeleteDialogModel _model;
 
-  final animationsMap = {
-    'mouseRegionOnPageLoadAnimation': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        VisibilityEffect(duration: 1.ms),
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 300.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        TiltEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 300.ms,
-          begin: const Offset(0.524, 0),
-          end: const Offset(0, 0),
-        ),
-      ],
-    ),
-  };
+  final animationsMap = <String, AnimationInfo>{};
 
   @override
   void setState(VoidCallback callback) {
@@ -67,6 +46,29 @@ class _DeleteDialogWidgetState extends State<DeleteDialogWidget>
       setState(() {
         _model.showDelete = false;
       });
+    });
+
+    animationsMap.addAll({
+      'mouseRegionOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          VisibilityEffect(duration: 1.ms),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 300.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+          TiltEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 300.0.ms,
+            begin: const Offset(0.524, 0),
+            end: const Offset(0, 0),
+          ),
+        ],
+      ),
     });
   }
 
@@ -102,9 +104,14 @@ class _DeleteDialogWidgetState extends State<DeleteDialogWidget>
                 Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(12.0, 12.0, 0.0, 8.0),
                   child: Text(
-                    'Options',
+                    FFLocalizations.of(context).getText(
+                      'owb68ny1' /* Options */,
+                    ),
                     textAlign: TextAlign.start,
-                    style: FlutterFlowTheme.of(context).labelMedium,
+                    style: FlutterFlowTheme.of(context).labelMedium.override(
+                          fontFamily: 'Manrope',
+                          letterSpacing: 0.0,
+                        ),
                   ),
                 ),
                 MouseRegion(
@@ -153,9 +160,15 @@ class _DeleteDialogWidgetState extends State<DeleteDialogWidget>
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 0.0, 0.0),
                                 child: Text(
-                                  'Invite Users',
-                                  style:
-                                      FlutterFlowTheme.of(context).bodyMedium,
+                                  FFLocalizations.of(context).getText(
+                                    'z1zzsrcr' /* Invite Users */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Manrope',
+                                        letterSpacing: 0.0,
+                                      ),
                                 ),
                               ),
                             ),
@@ -217,13 +230,16 @@ class _DeleteDialogWidgetState extends State<DeleteDialogWidget>
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 0.0, 0.0, 0.0),
                                 child: Text(
-                                  'Delete Chat',
+                                  FFLocalizations.of(context).getText(
+                                    'xz178y24' /* Delete Chat */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Manrope',
                                         color:
                                             FlutterFlowTheme.of(context).error,
+                                        letterSpacing: 0.0,
                                       ),
                                 ),
                               ),
@@ -273,19 +289,31 @@ class _DeleteDialogWidgetState extends State<DeleteDialogWidget>
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         12.0, 0.0, 0.0, 4.0),
                                     child: Text(
-                                      'Confirm Delete',
+                                      FFLocalizations.of(context).getText(
+                                        'lfox05to' /* Confirm Delete */,
+                                      ),
                                       textAlign: TextAlign.start,
                                       style: FlutterFlowTheme.of(context)
-                                          .labelMedium,
+                                          .labelMedium
+                                          .override(
+                                            fontFamily: 'Manrope',
+                                            letterSpacing: 0.0,
+                                          ),
                                     ),
                                   ),
                                   Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         12.0, 0.0, 0.0, 0.0),
                                     child: Text(
-                                      'You can\'t undo this action.',
+                                      FFLocalizations.of(context).getText(
+                                        'juv9b38u' /* You can't undo this action. */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'Manrope',
+                                            letterSpacing: 0.0,
+                                          ),
                                     ),
                                   ),
                                 ],
@@ -295,12 +323,15 @@ class _DeleteDialogWidgetState extends State<DeleteDialogWidget>
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 0.0, 0.0),
                               child: Text(
-                                'Delete',
+                                FFLocalizations.of(context).getText(
+                                  'kgd0yncy' /* Delete */,
+                                ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Manrope',
                                       color: FlutterFlowTheme.of(context).error,
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.bold,
                                     ),
                               ),
