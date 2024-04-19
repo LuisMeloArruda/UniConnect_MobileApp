@@ -101,7 +101,7 @@ To ensure long-term maintenance of the code and facilitate easy understanding, o
 
 You can find below information and references related with the project management in our team:
 - Backlog management: Product backlog and Sprint backlog in a [Github Projects board](https://github.com/orgs/FEUP-LEIC-ES-2023-24/projects/56)
-- Release management: [v0](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/commits/v0), v1, v2, v3, ...;
+- Release management: [v0](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/commits/v0), [v1](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/commits/v1), v2, v3, ...;
 - Sprint planning and retrospectives:
     - plans: screenshots of Github Projects board at begin and end of each iteration;
     - retrospectives: meeting notes in a document in the repository;
@@ -117,23 +117,35 @@ You can find below information and references related with the project managemen
 Release: https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/releases/tag/v0
 
 ## Iteration 1
-Release: 
+Release: https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/releases/tag/v1
 
 ### Board
 
 `Before`
 
-![IT1](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/assets/116494634/643c033d-32ed-44c0-9ad3-d45eb5973241)
+![IT1_Before](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/assets/116494634/643c033d-32ed-44c0-9ad3-d45eb5973241)
 
 `After`
+
+![IT2_After](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/assets/116494634/44a35718-6a06-417e-acc4-2f0360e2800c)
+
 
 ### Retrospective
 
 #### What went well?
 
+- We managed to implement everything of what we had on the iteration backlog;
+- We improved on what we had designed previously for the UI mockups;
+- Good relationship between team members.
+
 #### What should we do differently?
 
+- Document unforeseen features by creating user stories in the GitHub Project Board.
+
 #### What still puzzles us?
+
+- Some of the FlutterFlow syntax;
+- Specifics of the Gherkin automated testing.
 
 ## Iteration 2
 
@@ -142,6 +154,9 @@ Release:
 ### Board
 
 `Before`
+
+![IT2_Before](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/assets/116494634/b8626b2d-1011-48b4-8774-38f7259e99cb)
+
 
 `After`
 
