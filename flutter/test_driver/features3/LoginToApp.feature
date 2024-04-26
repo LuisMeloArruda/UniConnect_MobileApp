@@ -7,9 +7,14 @@ Background:
     Given I have launched the app
 
 Scenario: Logging in with username and password (successful user log in)
-    Given I am a university student
+    Given I am on the login page
     When I log in with my username "example_username" and password "example_password"
+    And I tap the "Sign in" button 1 times
     Then I should be logged in to my account
     And I should have access to the app's features
 
-Scenario: Logging in with username and password (successful user log in)
+Scenario: Logging in with username and password (unsuccessful user log in)
+    Given I am on the login page
+    When I log in with my username "example_username" and password "example_password"
+    And I tap the "Sign in" button 1 times
+    Then I am on the "login page"
