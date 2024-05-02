@@ -67,18 +67,21 @@ class AppStateNotifier extends ChangeNotifier {
   }
 }
 
-GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
+GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
+    GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const HomePageWidget() : const LoginWidget(),
+      errorBuilder: (context, state) => appStateNotifier.loggedIn
+          ? entryPage ?? const HomePageWidget()
+          : const CreateAccountWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) =>
-              appStateNotifier.loggedIn ? const HomePageWidget() : const LoginWidget(),
+          builder: (context, _) => appStateNotifier.loggedIn
+              ? entryPage ?? const HomePageWidget()
+              : const CreateAccountWidget(),
         ),
         FFRoute(
           name: 'HomePage',
@@ -119,12 +122,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const Chat2MainWidget(),
         ),
         FFRoute(
-          name: 'chat_2_InviteUsers',
-          path: '/chat2InviteUsers',
+          name: 'InviteUsers',
+          path: '/inviteUsers',
           asyncParams: {
             'chatRef': getDoc(['chats'], ChatsRecord.fromSnapshot),
           },
-          builder: (context, params) => Chat2InviteUsersWidget(
+          builder: (context, params) => InviteUsersWidget(
             chatRef: params.getParam(
               'chatRef',
               ParamType.Document,
@@ -144,11 +147,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.Document,
             ),
           ),
-        ),
-        FFRoute(
-          name: 'EditProfileCopy',
-          path: '/editProfileCopy',
-          builder: (context, params) => const EditProfileCopyWidget(),
         ),
         FFRoute(
           name: 'onboarding',
@@ -179,6 +177,29 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'RecoverPassword',
           path: '/recoverPassword',
           builder: (context, params) => const RecoverPasswordWidget(),
+        ),
+        FFRoute(
+          name: 'MainTags',
+          path: '/mainTags',
+          builder: (context, params) => const MainTagsWidget(),
+        ),
+        FFRoute(
+          name: 'ChatPreview',
+          path: '/chatPreview',
+          asyncParams: {
+            'user': getDoc(['users'], UsersRecord.fromSnapshot),
+            'chats': getDoc(['chats'], ChatsRecord.fromSnapshot),
+          },
+          builder: (context, params) => ChatPreviewWidget(
+            user: params.getParam(
+              'user',
+              ParamType.Document,
+            ),
+            chats: params.getParam(
+              'chats',
+              ParamType.Document,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],
@@ -275,7 +296,7 @@ class FFParameters {
   // present is the special extra parameter reserved for the transition info.
   bool get isEmpty =>
       state.allParams.isEmpty ||
-      (state.extraMap.length == 1 &&
+      (state.allParams.length == 1 &&
           state.extraMap.containsKey(kTransitionInfoKey));
   bool isAsyncParam(MapEntry<String, dynamic> param) =>
       asyncParams.containsKey(param.key) && param.value is String;
@@ -296,10 +317,10 @@ class FFParameters {
 
   dynamic getParam<T>(
     String paramName,
-    ParamType type, [
+    ParamType type, {
     bool isList = false,
     List<String>? collectionNamePath,
-  ]) {
+  }) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
     }
@@ -350,7 +371,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
-            return '/login';
+            return '/createAccount';
           }
           return null;
         },

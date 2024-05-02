@@ -49,6 +49,8 @@ class _Chat2DetailsWidgetState extends State<Chat2DetailsWidget> {
         }(),
       );
     });
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

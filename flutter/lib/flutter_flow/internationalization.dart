@@ -113,7 +113,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'aqt7qnb8': {
       'en': 'My Profile',
-      'pt': 'Meu perfil',
+      'pt': 'Perfil',
     },
     'e8d05uub': {
       'en': 'Theme',
@@ -145,7 +145,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '6g6fle60': {
       'en': 'Direct Messages',
-      'pt': 'Mensagens diretas',
+      'pt': 'Mensagens Diretas',
     },
     '3whrcpk5': {
       'en': 'Home',
@@ -166,9 +166,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Sign In',
       'pt': 'Entrar',
     },
-    '5kdn1bu7': {
+    'nlgzly31': {
       'en': 'Forgot Password?',
-      'pt': 'Esqueceu a sua senha?',
+      'pt': '',
     },
     'e2jb2tof': {
       'en': 'Don\'t have an account? ',
@@ -187,13 +187,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'tqo0agln': {
       'en': 'username',
-      'pt': 'nome de usuário',
+      'pt': 'nome de utilizador',
     },
-    '3zq2uusd': {
+    'kxst3bbd': {
       'en': 'email',
       'pt': 'e-mail',
     },
-    'zv0al82t': {
+    '3ed9k5ir': {
       'en': 'password',
       'pt': 'senha',
     },
@@ -246,28 +246,60 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Chats',
       'pt': 'Bate-papos',
     },
+    '6w1rgrya': {
+      'en': 'Settings',
+      'pt': 'Configurações',
+    },
+    '1d11h2jp': {
+      'en': 'My Profile',
+      'pt': 'Perfil',
+    },
+    '1cwv8k4s': {
+      'en': 'Theme',
+      'pt': 'Tema',
+    },
+    '5jwlrfrz': {
+      'en': 'About us',
+      'pt': 'Sobre nós',
+    },
+    'kgckeu4a': {
+      'en': 'Logout',
+      'pt': 'Sair',
+    },
     'smwg83jy': {
       'en': '__',
       'pt': '__',
     },
   },
-  // chat_2_InviteUsers
+  // InviteUsers
   {
-    'txh1pk13': {
-      'en': 'Invite Friends',
-      'pt': 'Convide amigos',
+    'iza4mmiz': {
+      'en': 'UniConnect',
+      'pt': '',
     },
-    'v8guoqwa': {
-      'en': 'Selected',
-      'pt': 'Selecionado',
+    't9w1tdmo': {
+      'en': 'Students',
+      'pt': '',
     },
-    'lokw46mv': {
-      'en': 'Invite Friends',
-      'pt': 'Convide amigos',
+    'tepnujl3': {
+      'en': 'Settings',
+      'pt': '',
     },
-    '8rpicmyf': {
-      'en': 'Select users from below to start a chat.',
-      'pt': 'Selecione os usuários abaixo para iniciar um bate-papo.',
+    'r9z5wsi6': {
+      'en': 'My Profile',
+      'pt': '',
+    },
+    'kzbfpk9k': {
+      'en': 'Theme',
+      'pt': '',
+    },
+    '2gy2u16r': {
+      'en': 'About us',
+      'pt': '',
+    },
+    'd2b24vii': {
+      'en': 'Logout',
+      'pt': '',
     },
     's8u4piuk': {
       'en': 'Home',
@@ -281,38 +313,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'Lar',
     },
   },
-  // EditProfileCopy
-  {
-    'ut696i8v': {
-      'en': 'Name',
-      'pt': 'Nome',
-    },
-    'oc2iudwr': {
-      'en': 'Username',
-      'pt': 'Nome de usuário',
-    },
-    'xin32z9i': {
-      'en': 'Password',
-      'pt': 'Senha',
-    },
-    '87pfz8j5': {
-      'en': 'Save Changes',
-      'pt': 'Salvar alterações',
-    },
-  },
   // onboarding
   {
     '6l4rh0f9': {
       'en': 'Real Name',
       'pt': 'Nome real',
     },
-    'mwn2urzv': {
-      'en': 'Tags',
-      'pt': 'Tags',
-    },
     'nnoeybzc': {
       'en': 'Save Changes',
-      'pt': 'Salvar alterações',
+      'pt': 'Submeter alterações',
     },
   },
   // template_only_not_to_use
@@ -394,23 +403,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'nkvy3dmb': {
       'en': 'Username',
-      'pt': 'Nome de usuário',
+      'pt': 'Nome de utilizador',
     },
     'r4kw9nv0': {
       'en': 'Real Name',
-      'pt': 'Nome real',
+      'pt': 'Nome Real',
     },
     'wymyl7ri': {
       'en': 'Email',
       'pt': 'E-mail',
     },
-    'xrc4fy7c': {
-      'en': 'Tags',
-      'pt': 'Tags',
-    },
     's8lk4sqe': {
       'en': 'Save',
-      'pt': 'Salvar',
+      'pt': 'Submeter',
     },
     'wtahojm3': {
       'en': 'Settings',
@@ -418,7 +423,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '0ox6w7ti': {
       'en': 'My Profile',
-      'pt': 'Meu perfil',
+      'pt': 'Perfil',
     },
     'zyy1l7k0': {
       'en': 'Theme',
@@ -435,10 +440,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // MyProfile
   {
-    'jiqt56hh': {
-      'en': 'Tags',
-      'pt': 'Tags',
-    },
     '2rj2nage': {
       'en': 'Logout',
       'pt': 'Sair',
@@ -448,7 +449,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     '63zy43qf': {
       'en': 'App developed by',
-      'pt': 'Aplicativo desenvolvido por',
+      'pt': 'Aplicação desenvolvida por',
     },
     '3c9mpmjf': {
       'en':
@@ -473,31 +474,253 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '3kizvrow': {
       'en': 'Forgot Password',
-      'pt': 'Esqueceu sua senha',
+      'pt': 'Esqueceu-se da senha',
     },
     'ndkj00rr': {
       'en':
           'We will send you an email with a link to reset your password, please enter the email associated with your account below.',
       'pt':
-          'Iremos lhe enviar um e-mail com um link para redefinir sua senha, digite o e-mail associado à sua conta abaixo.',
+          'Enviaremos um e-mail com um link para redefinir a sua senha. Digite no seguinte campo o e-mail associado à sua conta.',
     },
     'r02shnm1': {
       'en': 'Your email address...',
-      'pt': 'Seu endereço de email...',
+      'pt': 'O seu endereço de email...',
     },
     'ssurh65g': {
       'en': 'Enter your email...',
-      'pt': 'Digite seu e-mail...',
+      'pt': 'Digite o seu e-mail...',
     },
     'xgjdh373': {
       'en': 'Send Link',
       'pt': 'Enviar Link',
     },
-    '1nyamwo7': {
-      'en': 'Back',
-      'pt': 'Voltar',
-    },
     'e9l6lgzq': {
+      'en': 'Home',
+      'pt': 'Lar',
+    },
+  },
+  // MainTags
+  {
+    'dlckeh8b': {
+      'en': 'Course',
+      'pt': 'Curso',
+    },
+    'mkqjaboz': {
+      'en': 'L.EIC',
+      'pt': 'L.EIC',
+    },
+    '8kwfnydq': {
+      'en': 'L.EEC',
+      'pt': 'L.EEC',
+    },
+    '7msodpm4': {
+      'en': 'L.BIO',
+      'pt': 'L.BIO',
+    },
+    'q241az2u': {
+      'en': 'L.EMAT',
+      'pt': 'L.EMAT',
+    },
+    'p7r0zpvb': {
+      'en': 'L.EMG',
+      'pt': 'L.EMG',
+    },
+    'ogdmchrm': {
+      'en': 'L.EA',
+      'pt': 'L.EA',
+    },
+    '4vs1134x': {
+      'en': 'L.EGI',
+      'pt': 'L.EGI',
+    },
+    'ty43lccw': {
+      'en': 'L.EF',
+      'pt': 'L.EF',
+    },
+    'v9glf909': {
+      'en': 'L.EM',
+      'pt': 'L.EM',
+    },
+    '1ayg8dmj': {
+      'en': 'L.EQ',
+      'pt': 'L.EQ',
+    },
+    'biwthh45': {
+      'en': 'Interests',
+      'pt': 'Interesses',
+    },
+    'z5b8aefy': {
+      'en': 'Travel',
+      'pt': 'Viagem',
+    },
+    '378j7hzv': {
+      'en': 'Gaming',
+      'pt': 'Jogos',
+    },
+    '1qhvl6ju': {
+      'en': 'Football',
+      'pt': 'Futebol',
+    },
+    '3fiftnp9': {
+      'en': 'Guitar',
+      'pt': 'Guitarra',
+    },
+    'j2s0aivp': {
+      'en': 'Volunteer',
+      'pt': 'Voluntário',
+    },
+    'd6rypwoq': {
+      'en': 'Biking',
+      'pt': 'Andar de bicicleta',
+    },
+    'x5mwcmpc': {
+      'en': 'Art',
+      'pt': 'Arte',
+    },
+    'ik09bai6': {
+      'en': 'Music',
+      'pt': 'Música',
+    },
+    'chp4rlpl': {
+      'en': 'Cooking',
+      'pt': 'Culinária',
+    },
+    '2yza8xdr': {
+      'en': 'Chess',
+      'pt': 'Xadrez',
+    },
+    'hoiy28tm': {
+      'en': 'Reading',
+      'pt': 'Leitura',
+    },
+    'ktdcnyim': {
+      'en': 'Yoga',
+      'pt': 'Ioga',
+    },
+    'wma9vqyi': {
+      'en': 'Languages',
+      'pt': 'Línguas',
+    },
+    'gv5pvpp0': {
+      'en': 'Portuguese',
+      'pt': 'Português',
+    },
+    'rga0k5l0': {
+      'en': 'Spanish',
+      'pt': 'Espanhol',
+    },
+    '76w5ubtp': {
+      'en': 'Arabic',
+      'pt': 'Árabe',
+    },
+    '54339483': {
+      'en': 'German',
+      'pt': 'Alemão',
+    },
+    'ixd0iqoe': {
+      'en': 'Chinese',
+      'pt': 'Chinês',
+    },
+    'eog1nc2j': {
+      'en': 'Japanese',
+      'pt': 'Japonês',
+    },
+    'cvtpr1nz': {
+      'en': 'English',
+      'pt': 'Inglês',
+    },
+    '8m4euah2': {
+      'en': 'French',
+      'pt': 'Francês',
+    },
+    'c8hotz5x': {
+      'en': 'Russian',
+      'pt': 'Russo',
+    },
+    'dg7kdadz': {
+      'en': 'Italian',
+      'pt': 'Italiano',
+    },
+    'v24bcu5a': {
+      'en': 'Turkish',
+      'pt': 'Turco',
+    },
+    '5cc1ubeb': {
+      'en': 'Korean',
+      'pt': 'Coreano',
+    },
+    'cie6h7qf': {
+      'en': 'Year',
+      'pt': 'Ano',
+    },
+    '8isxvw2n': {
+      'en': '1st year',
+      'pt': '1º ano',
+    },
+    'tz88pzdr': {
+      'en': '2nd year',
+      'pt': '2º ano',
+    },
+    '7pb7nv9a': {
+      'en': '3rd year',
+      'pt': '3 º ano',
+    },
+    'pyt7zvhh': {
+      'en': '4th year',
+      'pt': '4º ano',
+    },
+    'np96wgkh': {
+      'en': '5th year',
+      'pt': '5º ano',
+    },
+    '7ohcc65r': {
+      'en': 'Others',
+      'pt': 'Outros',
+    },
+    '5tiph66w': {
+      'en': 'Add your own \ntag here!',
+      'pt': 'Adicione a sua própria\ntag aqui!',
+    },
+    'q5wcgrpd': {
+      'en': 'Tag',
+      'pt': 'Marcação',
+    },
+    '87pfz8j5': {
+      'en': 'Save Changes',
+      'pt': 'Submeter alterações',
+    },
+    'siouyck5': {
+      'en': 'Home',
+      'pt': 'Lar',
+    },
+  },
+  // ChatPreview
+  {
+    '1ys8y7xz': {
+      'en': 'START CHAT',
+      'pt': '',
+    },
+    'aqppj9pi': {
+      'en': 'Settings',
+      'pt': 'Configurações',
+    },
+    '04q4r7kb': {
+      'en': 'My Profile',
+      'pt': 'Perfil',
+    },
+    'v3lipbty': {
+      'en': 'Theme',
+      'pt': 'Tema',
+    },
+    'xdcdxqeg': {
+      'en': 'About us',
+      'pt': 'Sobre nós',
+    },
+    'eaf8mp78': {
+      'en': 'Logout',
+      'pt': 'Sair',
+    },
+    'lpqxo9kk': {
       'en': 'Home',
       'pt': 'Lar',
     },
@@ -570,15 +793,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'aan3uhau': {
       'en': 'Change Photo',
-      'pt': '',
+      'pt': 'Mudar foto',
     },
     'lbn01e4c': {
       'en': 'Upload Image',
-      'pt': '',
+      'pt': 'Enviar Imagem',
     },
     '9l7hktm8': {
       'en': 'Save Changes',
-      'pt': '',
+      'pt': 'Submeter alterações',
     },
   },
   // Miscellaneous

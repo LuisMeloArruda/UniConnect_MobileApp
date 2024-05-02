@@ -21,5 +21,12 @@ service cloud.firestore {
       allow write: if /databases/$(database)/documents/users/$(request.auth.uid) in resource.data.users;
       allow delete: if /databases/$(database)/documents/users/$(request.auth.uid) in resource.data.users;
     }
+
+    match /Other_tags/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if true;
+    }
   }
 }

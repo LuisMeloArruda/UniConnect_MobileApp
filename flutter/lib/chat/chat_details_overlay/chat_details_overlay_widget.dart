@@ -34,6 +34,8 @@ class _ChatDetailsOverlayWidgetState extends State<ChatDetailsOverlayWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ChatDetailsOverlayModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -188,7 +190,7 @@ class _ChatDetailsOverlayWidgetState extends State<ChatDetailsOverlayWidget> {
                             Navigator.pop(context);
 
                             context.pushNamed(
-                              'chat_2_InviteUsers',
+                              'InviteUsers',
                               queryParameters: {
                                 'chatRef': serializeParam(
                                   widget.chatRef,

@@ -23,6 +23,8 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => Chat2MainModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -74,7 +76,7 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
               fillColor: FlutterFlowTheme.of(context).primary,
               icon: Icon(
                 Icons.more_vert,
-                color: FlutterFlowTheme.of(context).secondaryText,
+                color: FlutterFlowTheme.of(context).tertiary,
                 size: 24.0,
               ),
               onPressed: () async {

@@ -23,6 +23,8 @@ class _TemplateOnlyNotToUseWidgetState
   void initState() {
     super.initState();
     _model = createModel(context, () => TemplateOnlyNotToUseModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

@@ -35,6 +35,8 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
 
     _model.confirmpasswordTextController ??= TextEditingController();
     _model.confirmpasswordFocusNode ??= FocusNode();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -50,20 +52,19 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
           : FocusScope.of(context).unfocus(),
-      child: Scaffold(
-        key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
-        body: SafeArea(
-          top: true,
-          child: SingleChildScrollView(
+      child: WillPopScope(
+        onWillPop: () async => false,
+        child: Scaffold(
+          key: scaffoldKey,
+          backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+          body: SafeArea(
+            top: true,
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
-                Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
-                  child: Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 100.0),
+                Expanded(
+                  child: Align(
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -76,14 +77,14 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   40.0, 10.0, 40.0, 0.0),
                               child: Container(
-                                height: 600.0,
+                                height:
+                                    MediaQuery.sizeOf(context).height * 0.55,
                                 decoration: BoxDecoration(
                                   color: const Color(0x00F29274),
                                   borderRadius: BorderRadius.circular(22.0),
                                 ),
                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Container(
-                                  height: 450.0,
                                   decoration: BoxDecoration(
                                     color:
                                         FlutterFlowTheme.of(context).secondary,
@@ -213,7 +214,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                                   hintText: FFLocalizations.of(
                                                           context)
                                                       .getText(
-                                                    '3zq2uusd' /* email */,
+                                                    'kxst3bbd' /* email */,
                                                   ),
                                                   enabledBorder:
                                                       OutlineInputBorder(
@@ -304,7 +305,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                                   hintText: FFLocalizations.of(
                                                           context)
                                                       .getText(
-                                                    'zv0al82t' /* password */,
+                                                    '3ed9k5ir' /* password */,
                                                   ),
                                                   hintStyle: FlutterFlowTheme
                                                           .of(context)
@@ -639,6 +640,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                             },
                                             child: Container(
                                               width: 300.0,
+                                              height: 30.0,
                                               decoration: const BoxDecoration(
                                                 color: Color(0x00FFFFFF),
                                               ),
