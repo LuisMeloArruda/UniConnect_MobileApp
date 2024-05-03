@@ -189,7 +189,8 @@ Release:
 
 `Before`
 
-![IT3_Before](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/assets/116494634/c8ba77dd-8b2e-4728-9c14-7ab6c9c1777b)
+![IT3_Before](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/assets/116494634/4d2ee5ea-0140-4baf-b52d-9696ec5d7200)
+
 
 
 `After`
