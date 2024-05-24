@@ -34,6 +34,12 @@ class FFAppState extends ChangeNotifier {
     _ChangePhoto = value;
   }
 
+  bool _IsonOnboarding = false;
+  bool get IsonOnboarding => _IsonOnboarding;
+  set IsonOnboarding(bool value) {
+    _IsonOnboarding = value;
+  }
+
   final _userDocQueryManager = FutureRequestManager<UsersRecord>();
   Future<UsersRecord> userDocQuery({
     String? uniqueQueryKey,

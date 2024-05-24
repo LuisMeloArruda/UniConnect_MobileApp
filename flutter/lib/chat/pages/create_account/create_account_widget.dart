@@ -90,8 +90,8 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                         FlutterFlowTheme.of(context).secondary,
                                     borderRadius: BorderRadius.circular(22.0),
                                     border: Border.all(
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondary,
+                                      color:
+                                          FlutterFlowTheme.of(context).tertiary,
                                     ),
                                   ),
                                   child: Align(
@@ -634,7 +634,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                                               0.0, 0.0),
                                                   color: FlutterFlowTheme.of(
                                                           context)
-                                                      .tertiary,
+                                                      .alternate,
                                                   textStyle:
                                                       FlutterFlowTheme.of(
                                                               context)

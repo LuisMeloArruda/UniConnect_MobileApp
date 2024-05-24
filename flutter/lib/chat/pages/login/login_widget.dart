@@ -91,7 +91,7 @@ class _LoginWidgetState extends State<LoginWidget>
         onWillPop: () async => false,
         child: Scaffold(
           key: scaffoldKey,
-          backgroundColor: FlutterFlowTheme.of(context).primary,
+          backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
           body: SafeArea(
             top: true,
             child: Padding(
@@ -338,8 +338,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                       iconPadding:
                                           const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
-                                      color:
-                                          FlutterFlowTheme.of(context).tertiary,
+                                      color: FlutterFlowTheme.of(context)
+                                          .alternate,
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
@@ -378,7 +378,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                           .override(
                                             fontFamily: 'Yrsa',
                                             color: FlutterFlowTheme.of(context)
-                                                .primary,
+                                                .tertiary,
                                             fontSize: 18.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,

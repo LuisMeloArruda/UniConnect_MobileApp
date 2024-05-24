@@ -42,7 +42,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
         onWillPop: () async => false,
         child: Scaffold(
           key: scaffoldKey,
-          backgroundColor: FlutterFlowTheme.of(context).primary,
+          backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
           body: SafeArea(
             top: true,
             child: SingleChildScrollView(
@@ -98,7 +98,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyLarge.override(
                             fontFamily: 'Yrsa',
-                            color: FlutterFlowTheme.of(context).tertiary,
+                            color: FlutterFlowTheme.of(context).alternate,
                             fontSize: 23.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w600,

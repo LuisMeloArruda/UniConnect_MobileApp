@@ -72,7 +72,7 @@ void main() async {
       await tester.pumpAndSettle();
       await tester.tap(find.byKey(ValueKey('Row_1cc0')));
       await tester.pumpAndSettle();
-      expect(find.byKey(ValueKey('Row_siso')), findsOneWidget);
+      expect(find.byKey(ValueKey('UNDEFINED')), findsOneWidget);
     });
 
     testWidgets('Go to FindStudents', (WidgetTester tester) async {
@@ -84,7 +84,31 @@ void main() async {
       await tester.pumpAndSettle();
       await tester.tap(find.byKey(ValueKey('Column_ex3c')));
       await tester.pumpAndSettle();
-      expect(find.byKey(ValueKey('Text_filn')), findsOneWidget);
+      expect(find.byKey(ValueKey('Text_c5pf')), findsOneWidget);
+    });
+
+    testWidgets('Go to StudentEvents', (WidgetTester tester) async {
+      await tester.pumpWidget(ChangeNotifierProvider(
+        create: (context) => FFAppState(),
+        child: MyApp(),
+      ));
+
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(ValueKey('Column_idml')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(ValueKey('Text_u7ge')), findsWidgets);
+    });
+
+    testWidgets('Go to StudentOrganizations', (WidgetTester tester) async {
+      await tester.pumpWidget(ChangeNotifierProvider(
+        create: (context) => FFAppState(),
+        child: MyApp(),
+      ));
+
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(ValueKey('Column_4nmt')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(ValueKey('Text_z0ir')), findsWidgets);
     });
   });
 
@@ -212,20 +236,6 @@ void main() async {
       expect(find.text('Gallery'), findsWidgets);
     });
 
-    testWidgets('Edit Profile tags', (WidgetTester tester) async {
-      await tester.pumpWidget(ChangeNotifierProvider(
-        create: (context) => FFAppState(),
-        child: MyApp(
-          entryPage: EditProfileWidget(),
-        ),
-      ));
-
-      await tester.pumpAndSettle();
-      await tester.tap(find.byKey(ValueKey('IconButton_ogs4')));
-      await tester.pumpAndSettle();
-      expect(find.byKey(ValueKey('Button_zfsc')), findsOneWidget);
-    });
-
     testWidgets('Go to HomePage', (WidgetTester tester) async {
       await tester.pumpWidget(ChangeNotifierProvider(
         create: (context) => FFAppState(),
@@ -290,58 +300,6 @@ void main() async {
     });
   });
 
-  group('Tags', () {
-    setUp(() async {
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
-          email: 'cr7@gmail.com', password: 'ronaldo');
-    });
-
-    testWidgets('Go to previous page', (WidgetTester tester) async {
-      await tester.pumpWidget(ChangeNotifierProvider(
-        create: (context) => FFAppState(),
-        child: MyApp(
-          entryPage: MainTagsWidget(),
-        ),
-      ));
-
-      await tester.pumpAndSettle();
-      await tester.tap(find.byKey(ValueKey('IconButton_pe0z')));
-      await tester.pumpAndSettle();
-      expect(find.byKey(ValueKey('Button_ja9j')), findsOneWidget);
-    });
-
-    testWidgets('Add own tag and save changes', (WidgetTester tester) async {
-      await tester.pumpWidget(ChangeNotifierProvider(
-        create: (context) => FFAppState(),
-        child: MyApp(
-          entryPage: MainTagsWidget(),
-        ),
-      ));
-
-      await tester.pumpAndSettle();
-      await tester.enterText(
-          find.byKey(ValueKey('Other_tag_Add_j0xw')), 'fa do ronaldo');
-      await tester.tap(find.byKey(ValueKey('IconButton_epsl')));
-      await tester.tap(find.byKey(ValueKey('Button_zfsc')));
-      await tester.pumpAndSettle();
-      expect(find.text('fa do ronaldo'), findsWidgets);
-    });
-
-    testWidgets('Go to settings', (WidgetTester tester) async {
-      await tester.pumpWidget(ChangeNotifierProvider(
-        create: (context) => FFAppState(),
-        child: MyApp(
-          entryPage: MainTagsWidget(),
-        ),
-      ));
-
-      await tester.pumpAndSettle();
-      await tester.tap(find.byKey(ValueKey('Icon_nn7u')));
-      await tester.pumpAndSettle();
-      expect(find.byKey(ValueKey('test1')), findsOneWidget);
-    });
-  });
-
   group('AboutUs', () {
     setUp(() async {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
@@ -373,7 +331,7 @@ void main() async {
       await tester.pumpWidget(ChangeNotifierProvider(
         create: (context) => FFAppState(),
         child: MyApp(
-          entryPage: InviteUsersWidget(),
+          entryPage: FindStudentsWidget(),
         ),
       ));
 
@@ -387,14 +345,178 @@ void main() async {
       await tester.pumpWidget(ChangeNotifierProvider(
         create: (context) => FFAppState(),
         child: MyApp(
-          entryPage: InviteUsersWidget(),
+          entryPage: FindStudentsWidget(),
         ),
       ));
 
       await tester.pumpAndSettle();
-      await tester.tap(find.byKey(ValueKey('IconButton_zrus')));
+      await tester.tap(find.byKey(ValueKey('UNDEFINED')));
       await tester.pumpAndSettle();
-      expect(find.byKey(ValueKey('Button_cwod')), findsOneWidget);
+      expect(find.byKey(ValueKey('ChatPreview_ozsu')), findsOneWidget);
+    });
+
+    testWidgets('Start chat', (WidgetTester tester) async {
+      await tester.pumpWidget(ChangeNotifierProvider(
+        create: (context) => FFAppState(),
+        child: MyApp(
+          entryPage: FindStudentsWidget(),
+        ),
+      ));
+
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(ValueKey('UNDEFINED')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(ValueKey('Button_cwod')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(ValueKey('chat_ThreadComponent_7eb4')), findsWidgets);
+    });
+  });
+
+  group('Chat', () {
+    setUp(() async {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+          email: 'cr7@gmail.com', password: 'ronaldo');
+    });
+
+    testWidgets('Sends a message', (WidgetTester tester) async {
+      await tester.pumpWidget(ChangeNotifierProvider(
+        create: (context) => FFAppState(),
+        child: MyApp(
+          entryPage: ChatMainWidget(),
+        ),
+      ));
+
+      await tester.enterText(
+          find.descendant(
+            of: find.byKey(ValueKey('chat_ThreadComponent_7eb4')),
+            matching: find.byKey(ValueKey('TextField_daef')),
+          ),
+          'Hi Friend!');
+      await tester.tap(find.descendant(
+        of: find.byKey(ValueKey('chat_ThreadComponent_7eb4')),
+        matching: find.byKey(ValueKey('IconButton_dec6')),
+      ));
+      await tester.pumpAndSettle();
+      expect(find.text('Hi Friend!'), findsWidgets);
+    });
+
+    testWidgets('Go to Settings 1', (WidgetTester tester) async {
+      await tester.pumpWidget(ChangeNotifierProvider(
+        create: (context) => FFAppState(),
+        child: MyApp(
+          entryPage: ChatMainWidget(),
+        ),
+      ));
+
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(ValueKey('UNDEFINED')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(ValueKey('IconButton_zzws')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(ValueKey('test1')), findsOneWidget);
+    });
+
+    testWidgets('Go to Settings 2', (WidgetTester tester) async {
+      await tester.pumpWidget(ChangeNotifierProvider(
+        create: (context) => FFAppState(),
+        child: MyApp(
+          entryPage: ChatMainWidget(),
+        ),
+      ));
+
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(ValueKey('Icon_p7j3')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(ValueKey('test1')), findsOneWidget);
+    });
+  });
+
+  group('Student Events', () {
+    setUp(() async {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+          email: 'cr7@gmail.com', password: 'ronaldo');
+    });
+
+    testWidgets('Add new student event', (WidgetTester tester) async {
+      await tester.pumpWidget(ChangeNotifierProvider(
+        create: (context) => FFAppState(),
+        child: MyApp(
+          entryPage: StudentEventsMainWidget(),
+        ),
+      ));
+
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(ValueKey('IconButton_w2yn')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(ValueKey('Button_0ral')));
+    });
+
+    testWidgets('See information about student events',
+        (WidgetTester tester) async {
+      await tester.pumpWidget(ChangeNotifierProvider(
+        create: (context) => FFAppState(),
+        child: MyApp(
+          entryPage: StudentEventsMainWidget(),
+        ),
+      ));
+
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(ValueKey('IconButton_w2yn')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(ValueKey('Column_y9fm')), findsWidgets);
+    });
+
+    testWidgets('Go to Settings', (WidgetTester tester) async {
+      await tester.pumpWidget(ChangeNotifierProvider(
+        create: (context) => FFAppState(),
+        child: MyApp(
+          entryPage: StudentEventsMainWidget(),
+        ),
+      ));
+
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(ValueKey('Icon_ktxy')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(ValueKey('test1')), findsOneWidget);
+    });
+  });
+
+  group('Student Organizations', () {
+    testWidgets('Go to Settings', (WidgetTester tester) async {
+      await tester.pumpWidget(ChangeNotifierProvider(
+        create: (context) => FFAppState(),
+        child: MyApp(),
+      ));
+
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(ValueKey('Icon_aqf2')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(ValueKey('test1')), findsOneWidget);
+    });
+
+    testWidgets('Add new student organization', (WidgetTester tester) async {
+      await tester.pumpWidget(ChangeNotifierProvider(
+        create: (context) => FFAppState(),
+        child: MyApp(),
+      ));
+
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(ValueKey('IconButton_s996')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(ValueKey('Button_rtzb')));
+    });
+
+    testWidgets('See information about student organizations',
+        (WidgetTester tester) async {
+      await tester.pumpWidget(ChangeNotifierProvider(
+        create: (context) => FFAppState(),
+        child: MyApp(),
+      ));
+
+      await tester.pumpAndSettle();
+      await tester.tap(find.byKey(ValueKey('IconButton_s996')));
+      await tester.pumpAndSettle();
+      expect(find.byKey(ValueKey('Column_nzhd')), findsWidgets);
     });
   });
 }

@@ -153,6 +153,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.10.7"
+  cloud_functions:
+    dependency: "direct main"
+    description:
+      name: cloud_functions
+      sha256: "6c93bdee693d514693576bf66a5d56645482412b6230dc87669951aa60ec3d4b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.6.7"
+  cloud_functions_platform_interface:
+    dependency: "direct main"
+    description:
+      name: cloud_functions_platform_interface
+      sha256: "5e4c444c691ee134ba561029847c29b8082a7b33f442c3c52bc3c8416ca888a9"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.5.18"
+  cloud_functions_web:
+    dependency: "direct main"
+    description:
+      name: cloud_functions_web
+      sha256: "10b3c2cd559f2c5d801c2294462c55324db8523b071a5d7ca8a326b7aa795bbd"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.7.1"
   collection:
     dependency: "direct main"
     description:
@@ -337,6 +361,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.11.5"
+  firebase_messaging:
+    dependency: "direct main"
+    description:
+      name: firebase_messaging
+      sha256: d6a0abd7cc6e95235819962703670b54a2729b0ef5ff5a44ef51a9ac2cb44a30
+      url: "https://pub.dev"
+    source: hosted
+    version: "14.7.18"
+  firebase_messaging_platform_interface:
+    dependency: "direct main"
+    description:
+      name: firebase_messaging_platform_interface
+      sha256: "1109a16b69c3b4653f5dc266b1ac0a00f53c82a2ab13dd92ce58cfcd1038b6e3"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.5.26"
+  firebase_messaging_web:
+    dependency: "direct main"
+    description:
+      name: firebase_messaging_web
+      sha256: fb46f47c860be8268023b92faacfea6a4ed74e7197836dc19e7a272854903610
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.6.7"
   firebase_performance:
     dependency: "direct main"
     description:
@@ -1121,6 +1169,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
+  substring_highlight:
+    dependency: "direct main"
+    description:
+      name: substring_highlight
+      sha256: "96c61e8316098831f6bee87d2386617e4be6aaf87fbc89402dc049d371b67efb"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.33"
   sync_http:
     dependency: transitive
     description:
@@ -1153,6 +1209,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.1"
+  text_search:
+    dependency: "direct main"
+    description:
+      name: text_search
+      sha256: e2e826848ba452df6702dc8f1315de90e812eb2303ecec9cc1155f7715bec934
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
   timeago:
     dependency: "direct main"
     description:
@@ -1161,6 +1225,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.2.2"
+  tuple:
+    dependency: transitive
+    description:
+      name: tuple
+      sha256: a97ce2013f240b2f3807bcbaf218765b6f301c3eff91092bcfa23a039e7dd151
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.2"
   typed_data:
     dependency: transitive
     description:

@@ -6,6 +6,8 @@ import '/backend/backend.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
+import '/backend/push_notifications/push_notifications_handler.dart'
+    show PushNotificationsHandler;
 import '/index.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
@@ -74,14 +76,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) => appStateNotifier.loggedIn
           ? entryPage ?? const HomePageWidget()
-          : const CreateAccountWidget(),
+          : const LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.loggedIn
               ? entryPage ?? const HomePageWidget()
-              : const CreateAccountWidget(),
+              : const LoginWidget(),
         ),
         FFRoute(
           name: 'HomePage',
@@ -104,12 +106,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
           builder: (context, params) => const LoadingWidget(),
         ),
         FFRoute(
-          name: 'chat_2_Details',
-          path: '/chat2Details',
+          name: 'Chat',
+          path: '/chat',
           asyncParams: {
             'chatRef': getDoc(['chats'], ChatsRecord.fromSnapshot),
           },
-          builder: (context, params) => Chat2DetailsWidget(
+          builder: (context, params) => ChatWidget(
             chatRef: params.getParam(
               'chatRef',
               ParamType.Document,
@@ -117,17 +119,17 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
           ),
         ),
         FFRoute(
-          name: 'chat_2_main',
-          path: '/chat2Main',
-          builder: (context, params) => const Chat2MainWidget(),
+          name: 'ChatMain',
+          path: '/chatMain',
+          builder: (context, params) => const ChatMainWidget(),
         ),
         FFRoute(
-          name: 'InviteUsers',
-          path: '/inviteUsers',
+          name: 'FindStudents',
+          path: '/findStudents',
           asyncParams: {
             'chatRef': getDoc(['chats'], ChatsRecord.fromSnapshot),
           },
-          builder: (context, params) => InviteUsersWidget(
+          builder: (context, params) => FindStudentsWidget(
             chatRef: params.getParam(
               'chatRef',
               ParamType.Document,
@@ -188,16 +190,122 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
           path: '/chatPreview',
           asyncParams: {
             'user': getDoc(['users'], UsersRecord.fromSnapshot),
-            'chats': getDoc(['chats'], ChatsRecord.fromSnapshot),
           },
           builder: (context, params) => ChatPreviewWidget(
             user: params.getParam(
               'user',
               ParamType.Document,
             ),
-            chats: params.getParam(
-              'chats',
+          ),
+        ),
+        FFRoute(
+          name: 'StudentEventsCreateProfile',
+          path: '/studentEventsCreateProfile',
+          builder: (context, params) => const StudentEventsCreateProfileWidget(),
+        ),
+        FFRoute(
+          name: 'StudentOrganizationsCreateProfile',
+          path: '/studentOrganizationsCreateProfile',
+          builder: (context, params) =>
+              const StudentOrganizationsCreateProfileWidget(),
+        ),
+        FFRoute(
+          name: 'StudentEventsProfile',
+          path: '/studentEventsProfile',
+          builder: (context, params) => StudentEventsProfileWidget(
+            events: params.getParam(
+              'events',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['studentevents'],
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'StudentOrganizationsProfile',
+          path: '/studentOrganizationsProfile',
+          asyncParams: {
+            'events':
+                getDoc(['studentevents'], StudenteventsRecord.fromSnapshot),
+          },
+          builder: (context, params) => StudentOrganizationsProfileWidget(
+            organizations: params.getParam(
+              'organizations',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['studentorganizations'],
+            ),
+            events: params.getParam(
+              'events',
               ParamType.Document,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'StudentEventsMain',
+          path: '/studentEventsMain',
+          asyncParams: {
+            'chatRef': getDoc(['chats'], ChatsRecord.fromSnapshot),
+            'events':
+                getDoc(['studentevents'], StudenteventsRecord.fromSnapshot),
+          },
+          builder: (context, params) => StudentEventsMainWidget(
+            chatRef: params.getParam(
+              'chatRef',
+              ParamType.Document,
+            ),
+            events: params.getParam(
+              'events',
+              ParamType.Document,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'StudentOrganizationsMain',
+          path: '/studentOrganizationsMain',
+          asyncParams: {
+            'chatRef': getDoc(['chats'], ChatsRecord.fromSnapshot),
+            'events':
+                getDoc(['studentevents'], StudenteventsRecord.fromSnapshot),
+            'organizations': getDoc(['studentorganizations'],
+                StudentorganizationsRecord.fromSnapshot),
+          },
+          builder: (context, params) => StudentOrganizationsMainWidget(
+            chatRef: params.getParam(
+              'chatRef',
+              ParamType.Document,
+            ),
+            events: params.getParam(
+              'events',
+              ParamType.Document,
+            ),
+            organizations: params.getParam(
+              'organizations',
+              ParamType.Document,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'StudentEventsEditProfille',
+          path: '/studentEventsEditProfille',
+          builder: (context, params) => StudentEventsEditProfilleWidget(
+            stuEvent: params.getParam(
+              'stuEvent',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['studentevents'],
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'StudentOrganizationsEditProfile',
+          path: '/studentOrganizationsEditProfile',
+          builder: (context, params) => StudentOrganizationsEditProfileWidget(
+            stuOrg: params.getParam(
+              'stuOrg',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['studentorganizations'],
             ),
           ),
         )
@@ -371,7 +479,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
-            return '/createAccount';
+            return '/login';
           }
           return null;
         },
@@ -389,14 +497,13 @@ class FFRoute {
                   color: Colors.transparent,
                   child: Center(
                     child: Image.asset(
-                      'assets/images/UniConnect_transparent.png',
-                      width: 1000.0,
-                      height: 1000.0,
-                      fit: BoxFit.contain,
+                      'assets/images/UniConnect_transparent_small.png',
+                      width: double.infinity,
+                      fit: BoxFit.cover,
                     ),
                   ),
                 )
-              : page;
+              : PushNotificationsHandler(child: page);
 
           final transitionInfo = state.transitionInfo;
           return transitionInfo.hasTransition
@@ -459,4 +566,14 @@ class RootPageContext {
         value: RootPageContext(true, errorRoute),
         child: child,
       );
+}
+
+extension GoRouterLocationExtension on GoRouter {
+  String getCurrentLocation() {
+    final RouteMatch lastMatch = routerDelegate.currentConfiguration.last;
+    final RouteMatchList matchList = lastMatch is ImperativeRouteMatch
+        ? lastMatch.matches
+        : routerDelegate.currentConfiguration;
+    return matchList.uri.toString();
+  }
 }

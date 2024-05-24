@@ -113,7 +113,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'aqt7qnb8': {
       'en': 'My Profile',
-      'pt': 'Perfil',
+      'pt': 'Meu Perfil',
     },
     'e8d05uub': {
       'en': 'Theme',
@@ -126,6 +126,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'v0agsyg9': {
       'en': 'Logout',
       'pt': 'Sair',
+    },
+    '6g6fle60': {
+      'en': 'Direct Messages',
+      'pt': 'Mensagens Diretas',
     },
     '9axay1x7': {
       'en': 'Find\nStudents',
@@ -143,20 +147,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Edit\nProfile',
       'pt': 'Editar\nPerfil',
     },
-    '6g6fle60': {
-      'en': 'Direct Messages',
-      'pt': 'Mensagens Diretas',
-    },
     '3whrcpk5': {
       'en': 'Home',
-      'pt': 'Lar',
+      'pt': 'Página inicial',
     },
   },
   // Login
   {
     '1bt0bwzs': {
       'en': 'email',
-      'pt': 'e-mail',
+      'pt': 'email',
     },
     '700bnzqk': {
       'en': 'password',
@@ -164,11 +164,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'jmj4id3w': {
       'en': 'Sign In',
-      'pt': 'Entrar',
+      'pt': 'Iniciar Sessão',
     },
     'nlgzly31': {
       'en': 'Forgot Password?',
-      'pt': '',
+      'pt': 'Esqueceu a senha?',
     },
     'e2jb2tof': {
       'en': 'Don\'t have an account? ',
@@ -180,7 +180,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'pv9iolu7': {
       'en': 'Home',
-      'pt': 'Lar',
+      'pt': 'Página inicial',
     },
   },
   // CreateAccount
@@ -191,7 +191,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'kxst3bbd': {
       'en': 'email',
-      'pt': 'e-mail',
+      'pt': 'email',
     },
     '3ed9k5ir': {
       'en': 'password',
@@ -215,17 +215,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'm5h9vcqw': {
       'en': 'Home',
-      'pt': 'Lar',
+      'pt': 'Página inicial',
     },
   },
   // Loading
   {
     '04zcq0jq': {
       'en': 'Home',
-      'pt': 'Lar',
+      'pt': 'Página inicial',
     },
   },
-  // chat_2_Details
+  // Chat
   {
     'gqkvnlbi': {
       'en': 'Group Chat',
@@ -233,18 +233,22 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'q7ssry9d': {
       'en': 'Home',
-      'pt': 'Lar',
+      'pt': 'Página inicial',
     },
   },
-  // chat_2_main
+  // ChatMain
   {
     '0w4kjn1g': {
       'en': 'UniConnect',
       'pt': 'UniConnect',
     },
-    'ptd4l0bc': {
+    'pd0gpcpd': {
       'en': 'Chats',
-      'pt': 'Bate-papos',
+      'pt': '',
+    },
+    'd1dcj5bc': {
+      'en': ' Search Here...',
+      'pt': 'Procure aqui...',
     },
     '6w1rgrya': {
       'en': 'Settings',
@@ -252,7 +256,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '1d11h2jp': {
       'en': 'My Profile',
-      'pt': 'Perfil',
+      'pt': 'Meu Perfil',
     },
     '1cwv8k4s': {
       'en': 'Theme',
@@ -271,35 +275,51 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '__',
     },
   },
-  // InviteUsers
+  // FindStudents
   {
     'iza4mmiz': {
       'en': 'UniConnect',
-      'pt': '',
+      'pt': 'UniConnect',
     },
-    't9w1tdmo': {
+    'c32v5fma': {
       'en': 'Students',
-      'pt': '',
+      'pt': 'Estudantes',
+    },
+    'wdenfhcz': {
+      'en': ' Search Here...',
+      'pt': 'Procure aqui...',
+    },
+    'jnztbh98': {
+      'en': 'Tags',
+      'pt': 'Tags',
+    },
+    'z0jw8b1u': {
+      'en': ' Search Here...',
+      'pt': 'Procure aqui...',
+    },
+    'qdjyjynm': {
+      'en': 'Option 1',
+      'pt': 'Opção 1',
     },
     'tepnujl3': {
       'en': 'Settings',
-      'pt': '',
+      'pt': 'Configurações',
     },
     'r9z5wsi6': {
       'en': 'My Profile',
-      'pt': '',
+      'pt': 'Meu Perfil',
     },
     'kzbfpk9k': {
       'en': 'Theme',
-      'pt': '',
+      'pt': 'Tema',
     },
     '2gy2u16r': {
       'en': 'About us',
-      'pt': '',
+      'pt': 'Sobre nós',
     },
     'd2b24vii': {
       'en': 'Logout',
-      'pt': '',
+      'pt': 'Sair',
     },
     's8u4piuk': {
       'en': 'Home',
@@ -310,7 +330,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'djj19nwm': {
       'en': 'Home',
-      'pt': 'Lar',
+      'pt': 'Página inicial',
     },
   },
   // onboarding
@@ -318,6 +338,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '6l4rh0f9': {
       'en': 'Real Name',
       'pt': 'Nome real',
+    },
+    'r9jai2ki': {
+      'en': 'Field is required',
+      'pt': '',
+    },
+    '387jucob': {
+      'en': 'Please choose an option from the dropdown',
+      'pt': '',
     },
     'nnoeybzc': {
       'en': 'Save Changes',
@@ -411,7 +439,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'wymyl7ri': {
       'en': 'Email',
-      'pt': 'E-mail',
+      'pt': 'Email',
     },
     's8lk4sqe': {
       'en': 'Save',
@@ -463,7 +491,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '30zi9e4w': {
       'en': 'Home',
-      'pt': 'Lar',
+      'pt': 'Página inicial',
     },
   },
   // RecoverPassword
@@ -496,209 +524,125 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'e9l6lgzq': {
       'en': 'Home',
-      'pt': 'Lar',
+      'pt': 'Página inicial',
     },
   },
   // MainTags
   {
+    'kjr8c6yd': {
+      'en': 'Tags',
+      'pt': 'Tags',
+    },
     'dlckeh8b': {
       'en': 'Course',
       'pt': 'Curso',
     },
-    'mkqjaboz': {
+    'n5o7dpt6': {
+      'en': '',
+      'pt': '',
+    },
+    '8nlxg8ue': {
       'en': 'L.EIC',
       'pt': 'L.EIC',
     },
-    '8kwfnydq': {
-      'en': 'L.EEC',
-      'pt': 'L.EEC',
+    'rqenm8b6': {
+      'en': 'Option 1',
+      'pt': 'Opção 1',
     },
-    '7msodpm4': {
-      'en': 'L.BIO',
-      'pt': 'L.BIO',
-    },
-    'q241az2u': {
-      'en': 'L.EMAT',
-      'pt': 'L.EMAT',
-    },
-    'p7r0zpvb': {
-      'en': 'L.EMG',
-      'pt': 'L.EMG',
-    },
-    'ogdmchrm': {
-      'en': 'L.EA',
-      'pt': 'L.EA',
-    },
-    '4vs1134x': {
-      'en': 'L.EGI',
-      'pt': 'L.EGI',
-    },
-    'ty43lccw': {
-      'en': 'L.EF',
-      'pt': 'L.EF',
-    },
-    'v9glf909': {
-      'en': 'L.EM',
-      'pt': 'L.EM',
-    },
-    '1ayg8dmj': {
-      'en': 'L.EQ',
-      'pt': 'L.EQ',
-    },
-    'biwthh45': {
+    'gdmeg9ai': {
       'en': 'Interests',
-      'pt': 'Interesses',
+      'pt': 'interesses',
     },
-    'z5b8aefy': {
+    'ht8wuaml': {
+      'en': '',
+      'pt': '',
+    },
+    'y3678khs': {
       'en': 'Travel',
       'pt': 'Viagem',
     },
-    '378j7hzv': {
-      'en': 'Gaming',
-      'pt': 'Jogos',
+    'm83l1fl8': {
+      'en': 'Option 1',
+      'pt': 'Opção 1',
     },
-    '1qhvl6ju': {
-      'en': 'Football',
-      'pt': 'Futebol',
-    },
-    '3fiftnp9': {
-      'en': 'Guitar',
-      'pt': 'Guitarra',
-    },
-    'j2s0aivp': {
-      'en': 'Volunteer',
-      'pt': 'Voluntário',
-    },
-    'd6rypwoq': {
-      'en': 'Biking',
-      'pt': 'Andar de bicicleta',
-    },
-    'x5mwcmpc': {
-      'en': 'Art',
-      'pt': 'Arte',
-    },
-    'ik09bai6': {
-      'en': 'Music',
-      'pt': 'Música',
-    },
-    'chp4rlpl': {
-      'en': 'Cooking',
-      'pt': 'Culinária',
-    },
-    '2yza8xdr': {
-      'en': 'Chess',
-      'pt': 'Xadrez',
-    },
-    'hoiy28tm': {
-      'en': 'Reading',
-      'pt': 'Leitura',
-    },
-    'ktdcnyim': {
-      'en': 'Yoga',
-      'pt': 'Ioga',
-    },
-    'wma9vqyi': {
+    '159jb203': {
       'en': 'Languages',
-      'pt': 'Línguas',
+      'pt': 'Linguagens',
     },
-    'gv5pvpp0': {
+    'quy8lq5r': {
+      'en': '',
+      'pt': '',
+    },
+    '0wuyi2eu': {
       'en': 'Portuguese',
-      'pt': 'Português',
+      'pt': '',
     },
-    'rga0k5l0': {
-      'en': 'Spanish',
-      'pt': 'Espanhol',
+    'uedug9yg': {
+      'en': 'Option 1',
+      'pt': '',
     },
-    '76w5ubtp': {
-      'en': 'Arabic',
-      'pt': 'Árabe',
-    },
-    '54339483': {
-      'en': 'German',
-      'pt': 'Alemão',
-    },
-    'ixd0iqoe': {
-      'en': 'Chinese',
-      'pt': 'Chinês',
-    },
-    'eog1nc2j': {
-      'en': 'Japanese',
-      'pt': 'Japonês',
-    },
-    'cvtpr1nz': {
-      'en': 'English',
-      'pt': 'Inglês',
-    },
-    '8m4euah2': {
-      'en': 'French',
-      'pt': 'Francês',
-    },
-    'c8hotz5x': {
-      'en': 'Russian',
-      'pt': 'Russo',
-    },
-    'dg7kdadz': {
-      'en': 'Italian',
-      'pt': 'Italiano',
-    },
-    'v24bcu5a': {
-      'en': 'Turkish',
-      'pt': 'Turco',
-    },
-    '5cc1ubeb': {
-      'en': 'Korean',
-      'pt': 'Coreano',
-    },
-    'cie6h7qf': {
+    'su19tk6m': {
       'en': 'Year',
       'pt': 'Ano',
     },
-    '8isxvw2n': {
+    'u4hhljpk': {
+      'en': '',
+      'pt': '',
+    },
+    'esamkwfv': {
       'en': '1st year',
       'pt': '1º ano',
     },
-    'tz88pzdr': {
-      'en': '2nd year',
-      'pt': '2º ano',
+    'zmvkhjid': {
+      'en': 'Option 1',
+      'pt': 'Opção 1',
     },
-    '7pb7nv9a': {
-      'en': '3rd year',
-      'pt': '3 º ano',
+    '8bgryt9k': {
+      'en': 'Other',
+      'pt': 'Outro',
     },
-    'pyt7zvhh': {
-      'en': '4th year',
-      'pt': '4º ano',
+    'wutcoeg7': {
+      'en': '',
+      'pt': '',
     },
-    'np96wgkh': {
-      'en': '5th year',
-      'pt': '5º ano',
-    },
-    '7ohcc65r': {
+    'c5jyc35e': {
       'en': 'Others',
       'pt': 'Outros',
     },
-    '5tiph66w': {
-      'en': 'Add your own \ntag here!',
-      'pt': 'Adicione a sua própria\ntag aqui!',
+    'bm0i4ikt': {
+      'en': 'Option 1',
+      'pt': 'Opção 1',
     },
-    'q5wcgrpd': {
-      'en': 'Tag',
-      'pt': 'Marcação',
+    'xhi0wcnk': {
+      'en': 'Settings',
+      'pt': 'Configurações',
     },
-    '87pfz8j5': {
-      'en': 'Save Changes',
-      'pt': 'Submeter alterações',
+    'ds9713mk': {
+      'en': 'My Profile',
+      'pt': 'Meu Perfil',
+    },
+    '52qs9hwg': {
+      'en': 'Theme',
+      'pt': 'Tema',
+    },
+    'oprrr4ch': {
+      'en': 'About us',
+      'pt': 'Sobre nós',
+    },
+    'lirkd766': {
+      'en': 'Logout',
+      'pt': 'Sair',
     },
     'siouyck5': {
       'en': 'Home',
-      'pt': 'Lar',
+      'pt': 'Página inicial',
     },
   },
   // ChatPreview
   {
     '1ys8y7xz': {
       'en': 'START CHAT',
-      'pt': '',
+      'pt': 'INICIAR CONVERSA',
     },
     'aqppj9pi': {
       'en': 'Settings',
@@ -722,13 +666,325 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'lpqxo9kk': {
       'en': 'Home',
-      'pt': 'Lar',
+      'pt': 'Página inicial',
+    },
+  },
+  // StudentEventsCreateProfile
+  {
+    'ieazbiat': {
+      'en': 'Event Name',
+      'pt': 'Nome do evento',
+    },
+    'isn673ct': {
+      'en': 'Select Date and Time',
+      'pt': 'Selecione a data e o tempo',
+    },
+    'uof9o1d1': {
+      'en': 'Room',
+      'pt': 'Sala',
+    },
+    'r8027l4d': {
+      'en': 'Description',
+      'pt': 'Descrição',
+    },
+    '3tba3qdb': {
+      'en': 'Save',
+      'pt': 'Salvar',
+    },
+    'sv77mb2m': {
+      'en': 'Settings',
+      'pt': 'Configurações',
+    },
+    'mckkgvd5': {
+      'en': 'My Profile',
+      'pt': 'Meu Perfil',
+    },
+    'ytkxfu1l': {
+      'en': 'Theme',
+      'pt': '',
+    },
+    'i72kqpbh': {
+      'en': 'About us',
+      'pt': '',
+    },
+    'er6dfoy6': {
+      'en': 'Logout',
+      'pt': '',
+    },
+  },
+  // StudentOrganizationsCreateProfile
+  {
+    '0zj91t9x': {
+      'en': 'Organization Name',
+      'pt': 'Nome da organização',
+    },
+    'k215q1zw': {
+      'en': 'Email',
+      'pt': 'Email',
+    },
+    'fy2xqewd': {
+      'en': 'Room',
+      'pt': 'Sala',
+    },
+    'oei6ogoq': {
+      'en': 'Description',
+      'pt': 'Desc',
+    },
+    'xkm4pvmk': {
+      'en': 'Save',
+      'pt': '',
+    },
+    '09is7qqz': {
+      'en': 'Settings',
+      'pt': 'Configurações',
+    },
+    'bsuzv234': {
+      'en': 'My Profile',
+      'pt': 'Meu Perfil',
+    },
+    'vsmx8g1e': {
+      'en': 'Theme',
+      'pt': '',
+    },
+    'zlavvez7': {
+      'en': 'About us',
+      'pt': '',
+    },
+    'g43guuri': {
+      'en': 'Logout',
+      'pt': '',
+    },
+  },
+  // StudentEventsProfile
+  {
+    't5ek0xxi': {
+      'en': 'Delete',
+      'pt': 'Apagar',
+    },
+    'mev3am6s': {
+      'en': 'Settings',
+      'pt': 'Configurações',
+    },
+    'uxpzquvl': {
+      'en': 'My Profile',
+      'pt': 'Meu Perfil',
+    },
+    'dvvkm55c': {
+      'en': 'Theme',
+      'pt': 'Tema',
+    },
+    'l12iz1yb': {
+      'en': 'About us',
+      'pt': 'Sobre nós',
+    },
+    'at5lasoi': {
+      'en': 'Logout',
+      'pt': 'Sair',
+    },
+    'rtd7ize6': {
+      'en': 'Home',
+      'pt': 'Página inicial',
+    },
+  },
+  // StudentOrganizationsProfile
+  {
+    'uqvw6al5': {
+      'en': 'Delete',
+      'pt': 'Apagar',
+    },
+    '3u0vm2jv': {
+      'en': 'Settings',
+      'pt': 'Configurações',
+    },
+    'ebzjaa7s': {
+      'en': 'My Profile',
+      'pt': 'Meu perfil',
+    },
+    'dsxklrqg': {
+      'en': 'Theme',
+      'pt': 'Tema',
+    },
+    '55genvid': {
+      'en': 'About us',
+      'pt': 'Sobre nós',
+    },
+    'e2neyl67': {
+      'en': 'Logout',
+      'pt': 'Sair',
+    },
+    'jst0t28m': {
+      'en': 'Home',
+      'pt': 'Página Inicial',
+    },
+  },
+  // StudentEventsMain
+  {
+    'ljfmpv0r': {
+      'en': 'UniConnect',
+      'pt': 'UniConnect',
+    },
+    'udgiz4xk': {
+      'en': 'Student Events',
+      'pt': 'Eventos estudantis',
+    },
+    'wiezy3m9': {
+      'en': 'Search Here',
+      'pt': 'Procure aqui',
+    },
+    'ktw99o4o': {
+      'en': 'Settings',
+      'pt': 'Configurações',
+    },
+    'vm9l5xzr': {
+      'en': 'My Profile',
+      'pt': 'Meu perfil',
+    },
+    'zj9xp3nf': {
+      'en': 'Theme',
+      'pt': 'Tema',
+    },
+    'ml9b49bn': {
+      'en': 'About us',
+      'pt': 'Sobre nós',
+    },
+    'agmcta86': {
+      'en': 'Logout',
+      'pt': 'Sair',
+    },
+    'hdx0v7mx': {
+      'en': 'Home',
+      'pt': 'Página Inicial',
+    },
+  },
+  // StudentOrganizationsMain
+  {
+    'bhiuumon': {
+      'en': 'UniConnect',
+      'pt': 'UniConnect',
+    },
+    '7oxcj4zo': {
+      'en': 'Student\nOrganizations',
+      'pt': 'Organizações de estudantes',
+    },
+    'q1sgg4jr': {
+      'en': 'Search Here',
+      'pt': 'Procure aqui',
+    },
+    'e7mzdnie': {
+      'en': 'Settings',
+      'pt': 'Configurações',
+    },
+    'wz0svcf0': {
+      'en': 'My Profile',
+      'pt': 'Meu perfil',
+    },
+    'b8o9hqr1': {
+      'en': 'Theme',
+      'pt': 'Tema',
+    },
+    'tg6cwhvh': {
+      'en': 'About us',
+      'pt': 'Sobre nós',
+    },
+    '5d3hk0yf': {
+      'en': 'Logout',
+      'pt': 'Sair',
+    },
+    'qay3gocx': {
+      'en': 'Home',
+      'pt': 'Página Inicial',
+    },
+  },
+  // StudentEventsEditProfille
+  {
+    'vgt8tq55': {
+      'en': 'Event Name',
+      'pt': 'Nome do evento',
+    },
+    'd9eo7sa7': {
+      'en': 'Select Date and Time',
+      'pt': 'Selecione a data e o tempo',
+    },
+    '1nko9rt7': {
+      'en': 'Room',
+      'pt': 'Sala',
+    },
+    'whdeyuii': {
+      'en': 'Description',
+      'pt': 'Descrição',
+    },
+    'zkp0u4md': {
+      'en': 'Save',
+      'pt': '',
+    },
+    'f4oi776r': {
+      'en': 'Settings',
+      'pt': 'Configurações',
+    },
+    'kllu03eu': {
+      'en': 'My Profile',
+      'pt': 'Meu perfil',
+    },
+    'miv48vhf': {
+      'en': 'Theme',
+      'pt': 'Tema',
+    },
+    '6pvxvrym': {
+      'en': 'About us',
+      'pt': 'Sobre nós',
+    },
+    'zpxcmynh': {
+      'en': 'Logout',
+      'pt': 'Sair',
+    },
+  },
+  // StudentOrganizationsEditProfile
+  {
+    'chylucky': {
+      'en': 'Organization Name',
+      'pt': 'Nome da organização',
+    },
+    '2x3tifl3': {
+      'en': 'Email',
+      'pt': '',
+    },
+    'ubqmbg9r': {
+      'en': 'Room',
+      'pt': 'Sala',
+    },
+    'gkr19aws': {
+      'en': 'Description',
+      'pt': 'Descrição',
+    },
+    'eum0fvvn': {
+      'en': 'Save',
+      'pt': 'Salvar',
+    },
+    'erjclk2k': {
+      'en': 'Settings',
+      'pt': '',
+    },
+    'japtl54r': {
+      'en': 'My Profile',
+      'pt': '',
+    },
+    'hvgkc01n': {
+      'en': 'Theme',
+      'pt': 'Tema',
+    },
+    'rcd2jzz9': {
+      'en': 'About us',
+      'pt': 'Sobre nós',
+    },
+    'kp3w2el6': {
+      'en': 'Logout',
+      'pt': 'Sair',
     },
   },
   // chat_DetailsOverlay
   {
     'r85nwzze': {
-      'en': 'Group Chat ID: ',
+      'en': 'Chat ID: ',
       'pt': 'ID do bate-papo em grupo:',
     },
     '901yc4qj': {
@@ -759,7 +1015,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'l0kket5d': {
       'en': 'ME',
-      'pt': 'MEU',
+      'pt': 'EU',
     },
   },
   // deleteDialog
@@ -767,10 +1023,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'owb68ny1': {
       'en': 'Options',
       'pt': 'Opções',
-    },
-    'z1zzsrcr': {
-      'en': 'Invite Users',
-      'pt': 'Convidar usuários',
     },
     'xz178y24': {
       'en': 'Delete Chat',
@@ -818,15 +1070,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'pt': '',
     },
-    'ht8wuaml': {
+    'gcob6yg8': {
       'en': '',
       'pt': '',
     },
-    'quy8lq5r': {
+    'lolgcy17': {
       'en': '',
       'pt': '',
     },
-    'u4hhljpk': {
+    '0ri330z0': {
       'en': '',
       'pt': '',
     },

@@ -8,10 +8,12 @@ import 'schema/util/firestore_util.dart';
 import 'schema/users_record.dart';
 import 'schema/chat_messages_record.dart';
 import 'schema/chats_record.dart';
-import 'schema/other_tags_record.dart';
+import 'schema/studentevents_record.dart';
+import 'schema/studentorganizations_record.dart';
+import 'schema/tags_record.dart';
 
 export 'dart:async' show StreamSubscription;
-export 'package:cloud_firestore/cloud_firestore.dart';
+export 'package:cloud_firestore/cloud_firestore.dart' hide Order;
 export 'package:firebase_core/firebase_core.dart';
 export 'schema/index.dart';
 export 'schema/util/firestore_util.dart';
@@ -20,7 +22,9 @@ export 'schema/util/schema_util.dart';
 export 'schema/users_record.dart';
 export 'schema/chat_messages_record.dart';
 export 'schema/chats_record.dart';
-export 'schema/other_tags_record.dart';
+export 'schema/studentevents_record.dart';
+export 'schema/studentorganizations_record.dart';
+export 'schema/tags_record.dart';
 
 /// Functions to query UsersRecords (as a Stream and as a Future).
 Future<int> queryUsersRecordCount({
@@ -133,38 +137,112 @@ Future<List<ChatsRecord>> queryChatsRecordOnce({
       singleRecord: singleRecord,
     );
 
-/// Functions to query OtherTagsRecords (as a Stream and as a Future).
-Future<int> queryOtherTagsRecordCount({
+/// Functions to query StudenteventsRecords (as a Stream and as a Future).
+Future<int> queryStudenteventsRecordCount({
   Query Function(Query)? queryBuilder,
   int limit = -1,
 }) =>
     queryCollectionCount(
-      OtherTagsRecord.collection,
+      StudenteventsRecord.collection,
       queryBuilder: queryBuilder,
       limit: limit,
     );
 
-Stream<List<OtherTagsRecord>> queryOtherTagsRecord({
+Stream<List<StudenteventsRecord>> queryStudenteventsRecord({
   Query Function(Query)? queryBuilder,
   int limit = -1,
   bool singleRecord = false,
 }) =>
     queryCollection(
-      OtherTagsRecord.collection,
-      OtherTagsRecord.fromSnapshot,
+      StudenteventsRecord.collection,
+      StudenteventsRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,
     );
 
-Future<List<OtherTagsRecord>> queryOtherTagsRecordOnce({
+Future<List<StudenteventsRecord>> queryStudenteventsRecordOnce({
   Query Function(Query)? queryBuilder,
   int limit = -1,
   bool singleRecord = false,
 }) =>
     queryCollectionOnce(
-      OtherTagsRecord.collection,
-      OtherTagsRecord.fromSnapshot,
+      StudenteventsRecord.collection,
+      StudenteventsRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query StudentorganizationsRecords (as a Stream and as a Future).
+Future<int> queryStudentorganizationsRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      StudentorganizationsRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<StudentorganizationsRecord>> queryStudentorganizationsRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      StudentorganizationsRecord.collection,
+      StudentorganizationsRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<StudentorganizationsRecord>> queryStudentorganizationsRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      StudentorganizationsRecord.collection,
+      StudentorganizationsRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query TagsRecords (as a Stream and as a Future).
+Future<int> queryTagsRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      TagsRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<TagsRecord>> queryTagsRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      TagsRecord.collection,
+      TagsRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<TagsRecord>> queryTagsRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      TagsRecord.collection,
+      TagsRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,
