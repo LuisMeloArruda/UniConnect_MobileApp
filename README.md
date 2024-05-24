@@ -101,7 +101,7 @@ To ensure long-term maintenance of the code and facilitate easy understanding, o
 
 You can find below information and references related with the project management in our team:
 - Backlog management: Product backlog and Sprint backlog in a [Github Projects board](https://github.com/orgs/FEUP-LEIC-ES-2023-24/projects/56)
-- Release management: [v0](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/commits/v0), [v1](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/commits/v1), v2, v3, ...;
+- Release management: [v0](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/commits/v0), [v1](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/commits/v1), [v2](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/commits/v2), v3;
 - Sprint planning and retrospectives:
     - plans: screenshots of Github Projects board at begin and end of each iteration;
     - retrospectives: meeting notes in a document in the repository;
@@ -149,7 +149,7 @@ Release: https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/releases/tag/v1
 
 ## Iteration 2
 
-Release: 
+Release: https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/releases/tag/v2
 
 ### Board
 
@@ -160,13 +160,26 @@ Release:
 
 `After`
 
+![IT2_After](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/assets/116494634/8425091d-e133-414c-875e-f4ffee40cb4d)
+
+
 ### Retrospective
 
 #### What went well?
 
+- We managed to implement everything of what we had on the iteration backlog;
+- We improved on what we had designed previously for the UI mockups;
+- Good relationship between team members.
+
 #### What should we do differently?
 
+- Change some UI to be more user-friendly;
+- Do even more unit testing.
+
 #### What still puzzles us?
+
+- Some of the Flutter syntax;
+- How to use the unit testing tool in FlutterFlow.
 
 ## Iteration 3
 
@@ -176,23 +189,9 @@ Release:
 
 `Before`
 
-`After`
+![IT3_Before](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/assets/116494634/4d2ee5ea-0140-4baf-b52d-9696ec5d7200)
 
-### Retrospective
 
-#### What went well?
-
-#### What should we do differently?
-
-#### What still puzzles us?
-
-## Iteration 4
-
-Release: 
-
-### Board
-
-`Before`
 
 `After`
 
@@ -201,3 +200,4 @@ Release:
 #### What went well?
 
 #### What should we do differently?
+
