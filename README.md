@@ -101,7 +101,7 @@ To ensure long-term maintenance of the code and facilitate easy understanding, o
 
 You can find below information and references related with the project management in our team:
 - Backlog management: Product backlog and Sprint backlog in a [Github Projects board](https://github.com/orgs/FEUP-LEIC-ES-2023-24/projects/56)
-- Release management: [v0](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/commits/v0), [v1](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/commits/v1), [v2](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/commits/v2), v3;
+- Release management: [v0](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/commits/v0), [v1](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/commits/v1), [v2](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/commits/v2), [v3](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/commits/v3);
 - Sprint planning and retrospectives:
     - plans: screenshots of Github Projects board at begin and end of each iteration;
     - retrospectives: meeting notes in a document in the repository;
@@ -183,7 +183,7 @@ Release: https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/releases/tag/v2
 
 ## Iteration 3
 
-Release: 
+Release: https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/releases/tag/v3
 
 ### Board
 
@@ -192,12 +192,20 @@ Release:
 ![IT3_Before](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/assets/116494634/4d2ee5ea-0140-4baf-b52d-9696ec5d7200)
 
 
-
 `After`
+
+![IT3 Afrer](https://github.com/FEUP-LEIC-ES-2023-24/2LEIC16T4/assets/116494634/1e1fdfe0-38fe-4062-842f-3d9b6a578d42)
+
 
 ### Retrospective
 
 #### What went well?
 
+- We managed to implement all the features we had set out to in the beginning of the project;
+- Good relationship between team members.
+
 #### What should we do differently?
+
+- Don't use FlutterFlow ever again.
+
 
